@@ -1,5 +1,20 @@
 body {
-    background-color: grey;
-    font-size: 40px;
-    text-transform: uppercase;
+    color: #000;
+}
+
+.wrapper {
+    background-color: whitesmoke;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    color: red;
+    padding: 20px;
+    
 }
