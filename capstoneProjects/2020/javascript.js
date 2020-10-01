@@ -13,7 +13,7 @@ $(document).ready(function () {
   }).done(function (data) {
     for (i in data) {
       for (j in data[i]) {
-        stu_id = 0;
+        stu_id = data[i]["id"];
         f_name = data[i]["firstName"];
         l_name = data[i]["lastName"];
         title = data[i]["projectTitle"];
@@ -102,14 +102,14 @@ $(document).ready(function () {
   //when prev button is clicked
   $(document).on("click", "#previous_button", function () {
     var id = $(this).parent().attr('id');
-    var img_id = $(`#proj_img_${id}`).attr('src');
+    var img_id = $(`#proj_img_${id}`).attr('id');
     prev(img_id);
   });
 
   //when next button is clicked 
   $(document).on("click", "#next_button", function () {
     var id = $(this).parent().attr('id');
-    var img_id = $(`#proj_img_${id}`).attr('src');
+    var img_id = $(`#proj_img_${id}`).attr('id');
     next(img_id);
   });
 
@@ -129,6 +129,7 @@ function prev(id) {
   } else {
     img_index = img_len - 1;
   }
+  console.log('passed id '+id)
   $(`#${id}`).attr("src", images[img_index]);
 
   console.log('after ' + img_index)
