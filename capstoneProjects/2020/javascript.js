@@ -1,8 +1,8 @@
 var images;
-var current_img_index;
+var img_index;
 $(document).ready(function () {
-  var fname, lname, title, desc, keywords;
-  var wrapper, stuDetails, proTitle, stuProject, projImages, buttons;
+  var stu_id, f_name, l_name, title, desc, keywords;
+  var wrapper, stu_details, pro_title, stu_projec, proj_images, buttons;
 
   const url =
     "https://bherekhet.github.io/data/2020.json";
@@ -13,51 +13,58 @@ $(document).ready(function () {
   }).done(function (data) {
     for (i in data) {
       for (j in data[i]) {
-        fname = data[i]["firstName"];
-        lname = data[i]["lastName"];
+        stu_id = 0;
+        f_name = data[i]["firstName"];
+        l_name = data[i]["lastName"];
         title = data[i]["projectTitle"];
         desc = data[i]["projectDesc"];
         keywords = data[i]["keywords"];
         images = data[i]["images"];
       }
-      createElements();
+      createElements(stu_id);
     }
   });
 
   function createElements() {
+    // console.log('here is student id'+stu_id)
     //a wrapper for every student
     wrapper = $("<div>", {
       id: "wrapper"
     });
 
     //a div for project image, title, desc
-    proTitle = $("<div>", {
+    pro_title = $("<div>", {
       class: 'title'
     }).append($("<span>", {
       class: "title"
     }).text(title));
-    stuProject = $("<div>", {
+    stu_projec = $("<div>", {
       class: "project"
     });
-    stuProject.append(proTitle);
+    stu_projec.append(pro_title);
 
     //project images
-    projImages = $("<div>", {
+    proj_images = $("<div>", {
       class: "images"
     });
-    current_img_index = 0;
-    for (i in images) {
-      projImages.append($("<img>", {
-        src: images[i]
-      }));
-    };
-    stuProject.append(projImages);
+    img_index = 0;
+    // for (i in images) {
+    //   projImages.append($("<img>", {
+    //     src: images[i]
+    //   }));
+    // };
+    proj_images.append($("<img>", {
+      src: images[img_index],
+      id: `proj_img_${stu_id}`,
+    }));
+    stu_projec.append(proj_images);
 
     //next and prev button for scrolling through project images 
     var btns = 2; // 0 = previous, 1 = next
     var value = 'previous';
     buttons = $("<div>", {
-      class: "buttons"
+      class: "buttons",
+      id: ''+stu_id,
     });
     for (var i = 0; i < btns; i++) {
       if (i == 1) {
@@ -67,73 +74,76 @@ $(document).ready(function () {
       }
       buttons.append('<input type="button" id="' + value + '_button" value="' + value + '"/>');
     }
-    stuProject.append(buttons)
+    stu_projec.append(buttons)
 
     //project description
-    stuProject.append($("<p>", {
+    stu_projec.append($("<p>", {
       class: "desc"
     }).text(desc));
 
-    wrapper.append(stuProject);
+    wrapper.append(stu_projec);
 
     //div to hold student name, project title, desc and more buttons => combined
-    stuDetails = $("<div>", {
+    stu_details = $("<div>", {
       id: "details"
     });
-    stuDetails.append($("<span>", {
+    stu_details.append($("<span>", {
       class: "fname"
-    }).text(fname));
-    stuDetails.append($("<span>", {
+    }).text(f_name));
+    stu_details.append($("<span>", {
       class: "lname"
-    }).text(lname));
-    wrapper.append(stuDetails);
+    }).text(l_name));
+    wrapper.append(stu_details);
 
     $(".container").append(wrapper);
   }
 
 
-
-
-
   //when prev button is clicked
   $(document).on("click", "#previous_button", function () {
-    // console.log(current_img_index);
-    prev(current_img_index);
+    var id = $(this).parent().attr('id');
+    var img_id = $(`#proj_img_${id}`).attr('src');
+    prev(img_id);
   });
 
   //when next button is clicked 
   $(document).on("click", "#next_button", function () {
-    next(current_img_index);
+    var id = $(this).parent().attr('id');
+    var img_id = $(`#proj_img_${id}`).attr('src');
+    next(img_id);
   });
+
+  // //when image is clicked
+  // $(document).on("click", ".images", function () {
+  //   $("body").css("background-image", "url('"+images[img_index]+"')");
+
+  // })
 });
 
 
-function prev(index) {
-  var imgLength = images.length
-  console.log('current index'+index);
-  // console.log(index)
-  // console.log(images.length);
-
-  // index < length && > 0 => index--
-  // else => index = length - 1
-  if (index < length && index > 0) {
-    index = index - 1;
-    console.log(index);
+function prev(id) {
+  var img_len = images.length
+  console.log('current index' + img_index);
+  if (img_index > 0) {
+    img_index = img_index - 1;
   } else {
-    index = index + 1;
-    console.log(index);
+    img_index = img_len - 1;
   }
+  $(`#${id}`).attr("src", images[img_index]);
 
+  console.log('after ' + img_index)
+}
 
-  //   $(".images").fadeOut(300, function () {
-  //     // console.log(index)
-  //   });
-  // }
+function next(id) {
+  var img_len = images.length
+  console.log(img_len + ' = length , index before "next" cliked ' + img_index)
 
-  function next(index) {
-    console.log(index)
-    $("#next_button").fadeOut(300, function () {
-      console.log(index)
-    });
+  if (img_index > img_len - 2) {
+    img_index = 0;
+  } else {
+    img_index = img_index + 1;
   }
+  $(`#${id}`).attr("src", images[img_index]);
+
+  console.log("after " + img_index)
 }
