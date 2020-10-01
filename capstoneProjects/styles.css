@@ -2,19 +2,35 @@ body {
     color: #000;
 }
 
-.wrapper {
+.container {
     background-color: whitesmoke;
     width: 80vw;
     margin: 0 auto;
+    padding: 50px;
+}
+#wrapper {
 }
 
-.title {
+/* .project .title {
     font-size: 2rem;
     text-align: center;
+    margin-bottom: 50px;
+} */
+
+.project {
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
 }
 
-.container {
-    color: red;
+.project .details {
     padding: 20px;
-    
+}
+
+img {
+    width: 400px;
+}
+
+a {
+    text-decoration: none;
 }

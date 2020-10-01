@@ -2,23 +2,25 @@
 {
 		"firstName": "Bereket1",
 		"lastName": "Degefa",
+		"profilePicture": "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
 		"projectTitle": "Home file server",
 		"projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
 		"keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
 		"images": [
 			"https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
-			"https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm"
+			"https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi"
 		]
 	},
 	{
 		"firstName": "Bereket2",
 		"lastName": "Degefa",
-		"projectTitle": "Home file server",
+		"profilePicture": "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
+		"projectTitle": "Home file server2",
 		"projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
 		"keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
 		"images": [
 			"https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
-			"https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm"
+			"https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi"
 		]
 	}
 
