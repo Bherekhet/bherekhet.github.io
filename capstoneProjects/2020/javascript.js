@@ -1,7 +1,7 @@
-var images;
-var img_index;
+
+var cap_project;
 $(document).ready(function () {
-  var stu_id, f_name, l_name, title, desc, keywords;
+  var stu_id, f_name, l_name, title, desc, keywords, images;
   var wrapper, stu_details, pro_title, stu_projec, proj_images, buttons;
 
   const url =
@@ -11,6 +11,7 @@ $(document).ready(function () {
   $.getJSON(url, {
     format: "json",
   }).done(function (data) {
+    cap_project = data;
     for (i in data) {
       for (j in data[i]) {
         stu_id = data[i]["id"];
@@ -21,11 +22,12 @@ $(document).ready(function () {
         keywords = data[i]["keywords"];
         images = data[i]["images"];
       }
-      createElements(stu_id);
+      createElements();
     }
   });
 
   function createElements() {
+    // console.log('cap project data', cap_project);
     // console.log('here is student id'+stu_id)
     //a wrapper for every student
     wrapper = $("<div>", {
@@ -45,17 +47,16 @@ $(document).ready(function () {
 
     //project images
     proj_images = $("<div>", {
-      class: "images"
+      class: "images", id: '' + stu_id,
     });
-    img_index = 0;
     // for (i in images) {
     //   projImages.append($("<img>", {
     //     src: images[i]
     //   }));
     // };
     proj_images.append($("<img>", {
-      src: images[img_index],
-      id: `proj_img_${stu_id}`,
+      src: images[0],
+      id: `proj_img_${stu_id}_0`,
     }));
     stu_projec.append(proj_images);
 
@@ -63,8 +64,7 @@ $(document).ready(function () {
     var btns = 2; // 0 = previous, 1 = next
     var value = 'previous';
     buttons = $("<div>", {
-      class: "buttons",
-      id: ''+stu_id,
+      class: "buttons", id: '' + stu_id,
     });
     for (var i = 0; i < btns; i++) {
       if (i == 1) {
@@ -98,53 +98,51 @@ $(document).ready(function () {
     $(".container").append(wrapper);
   }
 
-
-  //when prev button is clicked
   $(document).on("click", "#previous_button", function () {
     var id = $(this).parent().attr('id');
-    var img_id = $(`#proj_img_${id}`).attr('id');
-    prev(img_id);
+    nextORprev('prev', id);
   });
 
   //when next button is clicked 
   $(document).on("click", "#next_button", function () {
     var id = $(this).parent().attr('id');
-    var img_id = $(`#proj_img_${id}`).attr('id');
-    next(img_id);
+    nextORprev('next', id);
   });
-
-  // //when image is clicked
-  // $(document).on("click", ".images", function () {
-  //   $("body").css("background-image", "url('"+images[img_index]+"')");
-
-  // })
 });
 
+//when either next or prev button clicked
+//id = when prev button is clicked, 
+//images = find the id which represents which student => get all images using the id from array(contains every student data)
+//img_id = find current image id so it can be updated when looping to another image
+function nextORprev(button, id) {
+  var images = cap_project.find(stu => stu.id == id)['images'];
+  var img_id = $(`#${id}.images`).find('img').attr('id');
+  var img_index = img_id.substring(img_id.lastIndexOf('_') + 1);
 
-function prev(id) {
   var img_len = images.length
-  console.log('current index' + img_index);
-  if (img_index > 0) {
-    img_index = img_index - 1;
-  } else {
-    img_index = img_len - 1;
-  }
-  console.log('passed id '+id)
-  $(`#${id}`).attr("src", images[img_index]);
+  var current_index = parseInt(img_index);
 
-  console.log('after ' + img_index)
+  if (button == ('prev')) {
+    if (current_index > 0) {
+      current_index = current_index - 1;
+    } else {
+      current_index = img_len - 1;
+    }
+  } else {
+    if (current_index > img_len - 2) {
+      current_index = 0;
+    } else {
+      current_index = current_index + 1;
+    }
+  }
+  var new_id = img_id.substring(0, img_id.lastIndexOf('_'));
+  $(`#${id}.images`).find('img').replaceWith(`<img id=${new_id}_${current_index} src="${images[current_index]}"/>`);
+
+  //transition 
+  transition();
 }
 
-function next(id) {
-  var img_len = images.length
-  console.log(img_len + ' = length , index before "next" cliked ' + img_index)
+//image trasition function
+function transition() {
 
-  if (img_index > img_len - 2) {
-    img_index = 0;
-  } else {
-    img_index = img_index + 1;
-  }
-  $(`#${id}`).attr("src", images[img_index]);
-
-  console.log("after " + img_index)
 }
