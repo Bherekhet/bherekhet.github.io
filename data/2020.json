@@ -1,7 +1,7 @@
 [
   {
-	"id": 20201,
-	"firstName": "Bereket1",
+    "id": 20201,
+    "firstName": "Bereket1",
     "lastName": "Degefa",
     "profilePicture": "https://bereket.netlify.app/static/226d8ed1480c4127836f32ea6a2b663d/32fd5/profile.jpg",
     "projectTitle": "Home file server",
@@ -10,10 +10,15 @@
     "images": [
       "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
       "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi"
-    ]
+    ],
+    "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
+    "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
+    "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
+    "resume": "http://people.eku.edu/chandrav/NET/Capstone_2019/Allen/Allen_resume.pdf",
+    "contact": "Email student"
   },
   {
-	"id": 20202,
+    "id": 20202,
     "firstName": "Bereket2",
     "lastName": "Degefa",
     "profilePicture": "https://bereket.netlify.app/static/226d8ed1480c4127836f32ea6a2b663d/32fd5/profile.jpg",
@@ -23,6 +28,11 @@
     "images": [
       "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
       "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi"
-    ]
+    ],
+    "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
+    "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
+    "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
+    "resume": "http://people.eku.edu/chandrav/NET/Capstone_2019/Allen/Allen_resume.pdf",
+    "contact": "Email student"
   }
 ]
