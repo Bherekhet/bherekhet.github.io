@@ -1,12 +1,14 @@
+// "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi",
 
 var cap_project;
 $(document).ready(function () {
-  var stu_id, f_name, l_name, avatar, title, desc, keywords, images;
-  var wrapper, stu_details, stu_profile, pro_title, stu_projec, proj_images, buttons;
+  var stu_id, f_name, l_name, avatar, title, desc, keywords, images, video, brochure, presentation, resume;
+  var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_images, keys, stu_resources;
 
   const url =
     "https://bherekhet.github.io/data/2020.json";
 
+  /*------------------------------------- fetches student data from json file -------------------------------------*/
   // traverse the students object and display corresponding data in a styled format
   $.getJSON(url, {
     format: "json",
@@ -22,13 +24,17 @@ $(document).ready(function () {
         desc = data[i]["projectDesc"];
         keywords = data[i]["keywords"];
         images = data[i]["images"];
+        presentation = data[i]['presentation'];
+        video = data[i]['video'];
+        brochure = data[i]['brochure'];
+        resume = data[i]['resume'];
       }
       createElements();
     }
   });
 
+  /*-------------------------------------------------- creates the page -------------------------------------*/
   function createElements() {
-
     //a wrapper for every student
     wrapper = $("<div>", {
       id: "wrapper"
@@ -52,16 +58,18 @@ $(document).ready(function () {
     }).text(l_name));
     wrapper.append(stu_details);
 
+    //Student project div
+    stu_project = $("<div>", {
+      class: "project"
+    });
+
     //a div for project image, title, description and more-buttons
     pro_title = $("<div>", {
       class: 'title'
     }).append($("<span>", {
       class: "title"
     }).text(title));
-    stu_projec = $("<div>", {
-      class: "project"
-    });
-    stu_projec.append(pro_title);
+    stu_project.append(pro_title);
 
     //project images
     proj_images = $("<div>", {
@@ -71,7 +79,7 @@ $(document).ready(function () {
       src: images[0],
       id: `proj_img_${stu_id}_0`,
     }));
-    stu_projec.append(proj_images);
+    stu_project.append(proj_images);
 
     //next and prev button for scrolling through project images 
     var btns = 2; // 0 = previous, 1 = next
@@ -87,18 +95,38 @@ $(document).ready(function () {
       }
       buttons.append('<input type="button" id="' + value + '_button" value="' + value + '"/>');
     }
-    stu_projec.append(buttons)
+    stu_project.append(buttons)
 
     //project description
-    stu_projec.append($("<p>", {
+    stu_project.append($("<p>", {
       class: "desc"
     }).text(desc));
 
-    wrapper.append(stu_projec);
+    //keywords
+    keys = $('<div>', {
+      class: 'keywords'
+    }).text(keywords);
+    stu_project.append(keys);
+
+    //vide, presentation, brochure, resume  => student resources
+    stu_resources = $('<div>', {
+      class: 'resources',
+    }).append(`<span><a href=${presentation}>Presentation</a></span>`)
+      .append(`<span><a href=${brochure}>Brochure</a></span>`)
+      .append(`<span><a href=${resume}>Resume</a></span>`)
+      .append(`<span><a href=${video}>Video</a></span>`);
+
+
+    stu_project.append(stu_resources);
+
+    wrapper.append(stu_project);
 
     $(".container").append(wrapper);
   }
 
+
+  /*  --------------------------------------- next and previous button function --------------------------------*/
+  //when previous button is clicked 
   $(document).on("click", "#previous_button", function () {
     var id = $(this).parent().attr('id');
     nextORprev('prev', id);
