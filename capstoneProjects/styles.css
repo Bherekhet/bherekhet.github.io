@@ -4,7 +4,7 @@
 }
 
 .container {
-    background-color: #FFFFFF;
+    background-color: #fafafa;
 
 }
 
@@ -132,9 +132,9 @@
 }
 
 .images img {
-    width: 400px;
-    max-width: 400px;
-    height: 400px;
+    width: 500px;
+    max-width: 500px;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -148,6 +148,7 @@ a {
     width: 400px;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     
 }
 #previous_button,
@@ -160,7 +161,6 @@ a {
     border: none;
     border-radius: 30px;
     font-size: .8rem;
-    box-shadow: 0 0 0 7px 92DE34 inset;
     text-transform: capitalize;
 }
 

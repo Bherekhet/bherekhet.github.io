@@ -33,23 +33,24 @@ $(document).ready(function () {
         keywords = (data[i]["keywords"]).split(',');
 
         /*                         ---------------------- Test below case for images                           */
-        images = data[i]["images"] == ""
+        
+        images = data[i]["images"][0] == "" || null
           ? images = image_not_found
           : images = data[i]["images"];
 
-        data[i]['presentation'] != ''
+        data[i]['presentation'] != '' || null
           ? presentation = { 'link': data[i]['presentation'], 'color': '#99f3bd' }
           : presentation = { 'link': data[i]['presentation'], 'color': '#faf3dd' }
 
-        data[i]['video'] != ''
+        data[i]['video'] != '' || null
           ? video = { 'link': data[i]['video'], 'color': '#99f3bd' }
           : video = { 'link': data[i]['video'], 'color': '#faf3dd' }
 
-        data[i]['brochure'] != ''
+        data[i]['brochure'] != '' || null
           ? brochure = { 'link': data[i]['brochure'], 'color': '#99f3bd' }
           : brochure = { 'link': data[i]['brochure'], 'color': '#faf3dd' }
 
-        data[i]['resume'] != ''
+        data[i]['resume'] != '' || null
           ? resume = { 'link': data[i]['resume'], 'color': '#99f3bd' }
           : resume = { 'link': data[i]['resume'], 'color': '#faf3dd' }
 
