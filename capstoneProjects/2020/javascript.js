@@ -35,7 +35,8 @@ $(document).ready(function () {
         keywords = (data[i]["keywords"]).split(',');
 
         /*                         ---------------------- Test below case for images                           */
-        images = data[i]["images"] == ""
+        
+        images = data[i]["images"][0] == "" || null
           ? images = image_not_found
           : images = data[i]["images"];
 
