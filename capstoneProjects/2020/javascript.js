@@ -2,6 +2,8 @@
 // setTimeout(function() {location.reload();}, 2000);
 //for image model when clicked => https://www.w3schools.com/css/css3_images.asp
 
+var NOT_EXIST = 'https://bherekhet.github.io/404.html';
+
 var image_not_found = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thestahlman.com%2FCommon%2Fimages%2Fjquery%2Fgalleria%2Fimage-not-found.png&f=1&nofb=1";
 var cap_project;
 $(document).ready(function () {
@@ -22,7 +24,7 @@ $(document).ready(function () {
       for (i in data) {
         console.log('okay before ' + i)
         stu_id = data[i]["id"];
-        f_name = data[i]["firstName"];
+        f_name = data[i]["firstName"] + ' ';
         l_name = data[i]["lastName"];
         data[i]['profilePicture'] == ""
           ? avatar = image_not_found
@@ -38,20 +40,20 @@ $(document).ready(function () {
           : images = data[i]["images"];
 
         data[i]['presentation'] != ''
-          ? presentation = { 'link': data[i]['presentation'], 'color': '#99f3bd' }
-          : presentation = { 'link': data[i]['presentation'], 'color': '#faf3dd' }
+          ? presentation = { 'link': data[i]['presentation'], 'color': '#DDDAF9' }
+          : presentation = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
         data[i]['video'] != ''
-          ? video = { 'link': data[i]['video'], 'color': '#99f3bd' }
-          : video = { 'link': data[i]['video'], 'color': '#faf3dd' }
+          ? video = { 'link': data[i]['video'], 'color': '#DDDAF9' }
+          : video = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
         data[i]['brochure'] != ''
-          ? brochure = { 'link': data[i]['brochure'], 'color': '#99f3bd' }
-          : brochure = { 'link': data[i]['brochure'], 'color': '#faf3dd' }
+          ? brochure = { 'link': data[i]['brochure'], 'color': '#DDDAF9' }
+          : brochure = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
         data[i]['resume'] != ''
-          ? resume = { 'link': data[i]['resume'], 'color': '#99f3bd' }
-          : resume = { 'link': data[i]['resume'], 'color': '#faf3dd' }
+          ? resume = { 'link': data[i]['resume'], 'color': '#DDDAF9' }
+          : resume = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
         createElements();
       }
@@ -68,24 +70,29 @@ $(document).ready(function () {
       id: "wrapper"
     });
 
-    //div to hold student name
+    //student profile 
+    stu_profile = $('<div>', {
+      class: 'student_profile'
+    })
+
     stu_details = $("<div>", {
       id: "details"
     });
+
+    //hold student profile image
+    stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
+
+    //div to hold student name
+    
     stu_details.append($("<span>", {
       class: "fname"
     }).text(f_name));
     stu_details.append($("<span>", {
       class: "lname"
-    }).text(' ' + l_name));
+    }).text('' + l_name));
 
-    //student profile picture
-    stu_profile = $('<div>', {
-      class: 'student_profile'
-    })
 
     stu_profile.append(stu_details);
-    stu_profile.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
     wrapper.append(stu_profile);
 
     //Student project div
@@ -115,33 +122,29 @@ $(document).ready(function () {
     console.log('-----------------')
     //next and prev button for scrolling through project images 
     var btns = 2; // 0 = previous, 1 = next
-    var value = 'previous';
+    var value = '&#8250';
+    var button = 'previous';
     buttons = $("<div>", {
       class: "buttons", id: '' + stu_id,
     });
     for (var i = 0; i < btns; i++) {
       if (i == 1) {
-        value = "next";
+        value = "&#8250";
+        button = 'next'
       } else {
-        value = "previous";
+        value = "&#8249";
+        button = "previous"
       }
-      buttons.append('<input type="button" id="' + value + '_button" value="' + value + '"/>');
+      buttons.append('<input type="button" id="' + button + '_button" value="'+value+'"/>');
     }
-    stu_project.append(buttons)
+    stu_profile.append(buttons)
 
     //project description
     proj_details = $('<div>', {
       class: 'project_details'
     });
-    proj_details.append($("<p>", {
-      class: "desc"
-    }).text(desc));
-
-    // proj_details.append(keys);
-    wrapper.append(proj_details)
 
     //Project title
-
     pro_title = $("<div>", {
       class: 'title'
     }).append($("<span>", {
@@ -158,24 +161,29 @@ $(document).ready(function () {
       keys.append(`<span class='chip'>${keywords[i]}</span>`);
     }
 
-    // console.log(keywords)
-
     stu_resources.append(pro_title);
     stu_resources.append(keys);
+    
+    proj_details.append(stu_resources);
+
+    proj_details.append($("<p>", {
+      class: "desc"
+    }).text(desc));
+
+    wrapper.append(stu_project);
+    wrapper.append(proj_details)
+
 
     //vide, presentation, brochure, resume  => student resources, all resources combined to => reso
 
     reso = $('<div>', {
       class: 'resources',
-    }).append(`<span class='circle' style="background-color:${presentation.color}"><a href=${presentation.link}>Presentation</a></span>`)
-      .append(`<span class='circle' style="background-color:${brochure.color}"><a href=${brochure.link}>Brochure</a></span>`)
-      .append(`<span class='circle' style="background-color:${resume.color}"><a href=${resume.link}>Resume</a></span>`)
-      .append(`<span class='circle' style="background-color:${video.color}"><a href=${video.link}>Video</a></span>`);
+    }).append(`<span class='res-box' style="background-color:${presentation.color}"><a href=${presentation.link}>Presentation</a></span>`)
+      .append(`<span class='res-box' style="background-color:${brochure.color}"><a href=${brochure.link}>Brochure</a></span>`)
+      .append(`<span class='res-box' style="background-color:${resume.color}"><a href=${resume.link}>Resume</a></span>`)
+      .append(`<span class='res-box' style="background-color:${video.color}"><a href=${video.link}>Video</a></span>`);
 
-    proj_details.append(reso);
-
-    wrapper.append(stu_project);
-    wrapper.append(stu_resources);
+    wrapper.append(reso);
 
 
     $(".container").append(wrapper);
