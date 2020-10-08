@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 3vw;
 }
 
 .student_profile img {
@@ -77,7 +77,7 @@
 }
 
 .keys .title .title {
-    font-size: 14px;
+    font-size: 3vw;
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -92,7 +92,7 @@
 }
 
 .project_details .desc {
-    font-size: 11px;
+    font-size: 14px;
     padding: 0px 2px;
     line-height: 13px;
     letter-spacing: 0.13em;
