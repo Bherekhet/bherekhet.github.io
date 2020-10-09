@@ -11,7 +11,7 @@ $(document).ready(function () {
   var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources;
 
   const url =
-    "https://bherekhet.github.io/data/2020.json";
+    "https://bherekhet.github.io/data/2019.json";
 
   /*------------------------------------- fetches student data from json file -------------------------------------*/
   // traverse the students object and display corresponding data in a styled format

@@ -36,10 +36,11 @@
     display: flex;
     align-items: center;
 }
+
 /* .container> :first-child */
 #details .fname {
     margin-right: 2px;
-} 
+}
 
 #previous_button,
 #next_button {
@@ -61,7 +62,6 @@
     padding: 5px;
     margin: 0 auto;
     border: 1px solid #D5D5D5;
-    
 }
 
 .project_visuals img {
@@ -92,9 +92,9 @@
 }
 
 .project_details .desc {
-    font-size: 14px;
+    font-size: 3vw;
     padding: 0px 2px;
-    line-height: 13px;
+    line-height: 15px;
     letter-spacing: 0.13em;
 }
 
@@ -121,4 +121,115 @@
 a {
     text-decoration: none;
     color: #000;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        /* background-color: lightblue; */
+    }
+
+    .container> :first-child {
+        font-size: 2vw;
+        width: 100%;
+        text-align: center;
+    }
+
+    #wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .left {
+        width: 45%;
+        float: left;
+    }
+
+    .right {
+        width: 45%;
+    }
+
+
+    .student_profile {
+        height: 30px;
+        padding: 5px;
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        border: none;
+        margin: 0;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: normal;
+        font-size: 1.5vw;
+    }
+
+    .student_profile img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .project_visuals {
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+        border: none;
+    }
+
+    .project_visuals img {
+        border-radius: 8px;
+    }
+
+    .project_details {
+        border: none;
+        padding: 2px 5px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .project_details .desc {
+        font-size: 1.2vw;
+        padding: 0px 2px;
+        line-height: 25px;
+        letter-spacing: 0.13em;
+    }
+
+    .keys .title {
+        margin-bottom: 5px;
+    }
+
+    .keys .title .title {
+        font-weight: normal;
+        font-size: 1.5vw;
+    }
+
+    .resources {
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 5px;
+        margin: 0;
+        height: 10%;
+    }
+
+    .res-box {
+        margin: 5px;
+        padding: 4px 2px;
+        font-size: 1.2vw;
+        width: 20%;
+        text-align: center;
+        color: #000;
+        align-self: center;
+    }
+
+    .keywords .chip {
+        border-radius: 200px;
+        background-color: #DDDAF9;
+        font-size: 1vw;
+    }
+
+
 }
