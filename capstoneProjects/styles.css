@@ -81,21 +81,23 @@
     font-weight: bold;
     text-transform: capitalize;
 }
-
+.keywords {
+    width: 100%;
+    
+}
 .keywords .chip {
+    display: inline-block;
+    white-space: nowrap;
     margin: 3px;
     padding: 3px 5px;
     border-radius: 200px;
-    /* border: 1px solid cyan; */
     background-color: #DDDAF9;
-    font-size: 10px;
+    font-size: 2vw;
 }
 
 .project_details .desc {
-    font-size: 3vw;
-    padding: 0px 2px;
-    line-height: 15px;
-    letter-spacing: 0.13em;
+    font-size: 2.5vw;
+    padding: 10px;
 }
 
 .resources {
@@ -111,11 +113,15 @@
     display: inline-block;
     margin: 5px;
     padding: 4px 2px;
-    font-size: 10px;
+    font-size: 2vw;
     width: 20%;
     text-align: center;
     color: #000;
     align-self: center;
+}
+
+.res-box:hover {
+    background-color: #bfbaf1;
 }
 
 a {
@@ -124,10 +130,6 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-    body {
-        /* background-color: lightblue; */
-    }
-
     .container> :first-child {
         font-size: 2vw;
         width: 100%;
@@ -140,6 +142,8 @@ a {
         margin: 0 auto;
         width: 80%;
         margin-bottom: 50px;
+        border: 1px solid#D5D5D5;
+        padding: 15px;
     }
 
     .left {
@@ -153,15 +157,10 @@ a {
 
 
     .student_profile {
-        height: 30px;
-        padding: 5px;
-        display: flex;
         width: 100%;
-        max-width: 100%;
         border: none;
         margin: 0;
-        align-items: center;
-        justify-content: space-between;
+        margin-bottom: 10px;
         font-weight: normal;
         font-size: 1.5vw;
     }
@@ -173,7 +172,6 @@ a {
 
     .project_visuals {
         width: 100%;
-        padding: 5px;
         margin: 0;
         border: none;
     }
@@ -184,17 +182,13 @@ a {
 
     .project_details {
         border: none;
-        padding: 2px 5px;
         width: 100%;
-        max-width: 100%;
         margin: 0;
     }
 
     .project_details .desc {
-        font-size: 1.2vw;
+        font-size: 1vw;
         padding: 0px 2px;
-        line-height: 25px;
-        letter-spacing: 0.13em;
     }
 
     .keys .title {
@@ -209,25 +203,15 @@ a {
     .resources {
         border: none;
         width: 100%;
-        max-width: 100%;
-        padding: 5px;
         margin: 0;
-        height: 10%;
     }
 
     .res-box {
-        margin: 5px;
-        padding: 4px 2px;
         font-size: 1.2vw;
         width: 20%;
-        text-align: center;
-        color: #000;
-        align-self: center;
     }
 
     .keywords .chip {
-        border-radius: 200px;
-        background-color: #DDDAF9;
         font-size: 1vw;
     }
 

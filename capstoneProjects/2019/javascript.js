@@ -37,7 +37,7 @@ $(document).ready(function () {
         /*                         ---------------------- Test below case for images                           */
         
         images = data[i]["images"][0] == "" || null
-          ? images = image_not_found
+          ? images[0] = image_not_found
           : images = data[i]["images"];
 
         data[i]['presentation'] != ''
