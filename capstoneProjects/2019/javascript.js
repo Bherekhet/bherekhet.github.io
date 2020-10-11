@@ -19,40 +19,41 @@ $(document).ready(function () {
     format: "json",
   }).done(function (data, success) {
     cap_project = data;
+    console.log('this is a ' + success);
+    console.log(data.other)
     if (success == 'success') {
-      console.log('this is a ' + success);
-      for (i in data) {
-        stu_id = data[i]["id"];
-        f_name = data[i]["firstName"] + ' ';
-        l_name = data[i]["lastName"];
-        data[i]['profilePicture'] == ""
+      for (i in data.studentData) {
+        stu_id = data.studentData[i]["id"];
+        f_name = data.studentData[i]["firstName"] + ' ';
+        l_name = data.studentData[i]["lastName"];
+        data.studentData[i]['profilePicture'] == ""
           ? avatar = image_not_found
-          : avatar = data[i]['profilePicture']
+          : avatar = data.studentData[i]['profilePicture']
         // avatar = data[i]["profilePicture"];
-        title = data[i]["projectTitle"];
-        desc = data[i]["projectDesc"];
-        keywords = (data[i]["keywords"]).split(',');
+        title = data.studentData[i]["projectTitle"];
+        desc = data.studentData[i]["projectDesc"];
+        keywords = (data.studentData[i]["keywords"]).split(',');
 
         /*                         ---------------------- Test below case for images                           */
-        
-        data[i]["images"][0] == "" || null
-          ? images[0] = image_not_found
-          : images = data[i]["images"];
 
-        data[i]['presentation'] != ''
-          ? presentation = { 'link': data[i]['presentation'], 'color': '#DDDAF9' }
+        data.studentData[i]["images"][0] == "" || null
+          ? images[0] = image_not_found
+          : images = data.studentData[i]["images"];
+
+        data.studentData[i]['presentation'] != ''
+          ? presentation = { 'link': data.studentData[i]['presentation'], 'color': '#DDDAF9' }
           : presentation = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
-        data[i]['video'] != ''
-          ? video = { 'link': data[i]['video'], 'color': '#DDDAF9' }
+        data.studentData[i]['video'] != ''
+          ? video = { 'link': data.studentData[i]['video'], 'color': '#DDDAF9' }
           : video = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
-        data[i]['brochure'] != ''
-          ? brochure = { 'link': data[i]['brochure'], 'color': '#DDDAF9' }
+        data.studentData[i]['brochure'] != ''
+          ? brochure = { 'link': data.studentData[i]['brochure'], 'color': '#DDDAF9' }
           : brochure = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
-        data[i]['resume'] != ''
-          ? resume = { 'link': data[i]['resume'], 'color': '#DDDAF9' }
+        data.studentData[i]['resume'] != ''
+          ? resume = { 'link': data.studentData[i]['resume'], 'color': '#DDDAF9' }
           : resume = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
         createElements();
@@ -93,7 +94,7 @@ $(document).ready(function () {
     stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
 
     //div to hold student name
-    
+
     stu_details.append($("<span>", {
       class: "fname"
     }).text(f_name));
@@ -147,7 +148,7 @@ $(document).ready(function () {
         value = "&#8249";
         button = "previous"
       }
-      buttons.append('<input type="button" id="' + button + '_button" value="'+value+'"/>');
+      buttons.append('<input type="button" id="' + button + '_button" value="' + value + '"/>');
     }
     stu_profile.append(buttons)
 
@@ -174,7 +175,7 @@ $(document).ready(function () {
 
     stu_resources.append(pro_title);
     stu_resources.append(keys);
-    
+
     proj_details.append(stu_resources);
 
     proj_details.append($("<p>", {

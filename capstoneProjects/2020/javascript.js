@@ -20,8 +20,8 @@ $(document).ready(function () {
   }).done(function (data, success) {
     cap_project = data;
     if (success == 'success') {
-      console.log('this is a ' + success);
-      for (i in data) {
+      console.log(cap_project.studentData);
+      for (i in data.studentData) {
         console.log('okay before ' + i)
         stu_id = data[i]["id"];
         f_name = data[i]["firstName"] + ' ';

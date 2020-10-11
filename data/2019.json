@@ -465,38 +465,36 @@
       "resume": ""
     }
   ],
-  "other": [
-    {
-      "classPhoto": [
-        {
-          "url": "https://drive.google.com/uc?export=view&id=1qpBPnlzdhUgCeLv8SejPxZ1P9tUapZ3h",
-          "leftToRight": "Left to Right: Brian, Jon, Justin, John, Evan, Bryan, Alex, Cody, William, Caleb, Corey, Coleman, Matt, Aaron, Tony, Allen, Bruce, Lazim, Stephen, Anthony "
-        },
-        {
-          "url": "https://drive.google.com/uc?export=view&id=1FPDoTUN95_kTIZdllSELOvfq0TnhsPon",
-          "leftToRight": "Left to Right: Brian, Jon, Justin, John, Evan, Bryan, Alex, William, Caleb, Corey, Coleman, Matt, Aaron, Tony, Allen, Bruce, Lazim, Anthony "
-        }
-      ],
-      "outstanding": {
-        "title": "Outstanding Network Security & Electronics (NET) Senior 2018-19",
-        "name": "Allen Baker",
-        "link": "https://drive.google.com/uc?export=view&id=1GT2iDh0kuCFfI4mQDXD7q0Xw9ziZ89gG"
+  "other": {
+    "classPhoto": [
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1qpBPnlzdhUgCeLv8SejPxZ1P9tUapZ3h",
+        "leftToRight": "Left to Right: Brian, Jon, Justin, John, Evan, Bryan, Alex, Cody, William, Caleb, Corey, Coleman, Matt, Aaron, Tony, Allen, Bruce, Lazim, Stephen, Anthony "
       },
-      "presenter": {
-        "title": "College of Business & Technology Glen Kleine Capstone Presenter NET Senior 2018-19",
-        "name": "Allen",
-        "link": "https://drive.google.com/uc?export=view&id=1irBPGWQLM2sJqvukwGQYDGON6-LdgZV1"
-      },
-      "ga": {
-        "title": "Graduate Assistants Spring 2019",
-        "names": "Left to Right: Stephen Brewer, Joshua Dunn",
-        "link": "https://drive.google.com/uc?export=view&id=1QYg37OTb_S-A7FAmUTMSIaph0coaPv1n"
+      {
+        "url": "https://drive.google.com/uc?export=view&id=1FPDoTUN95_kTIZdllSELOvfq0TnhsPon",
+        "leftToRight": "Left to Right: Brian, Jon, Justin, John, Evan, Bryan, Alex, William, Caleb, Corey, Coleman, Matt, Aaron, Tony, Allen, Bruce, Lazim, Anthony "
       }
+    ],
+    "outstanding": {
+      "title": "Outstanding Network Security & Electronics (NET) Senior 2018-19",
+      "name": "Allen Baker",
+      "link": "https://drive.google.com/uc?export=view&id=1GT2iDh0kuCFfI4mQDXD7q0Xw9ziZ89gG"
+    },
+    "presenter": {
+      "title": "College of Business & Technology Glen Kleine Capstone Presenter NET Senior 2018-19",
+      "name": "Allen",
+      "link": "https://drive.google.com/uc?export=view&id=1irBPGWQLM2sJqvukwGQYDGON6-LdgZV1"
+    },
+    "ga": {
+      "title": "Graduate Assistants Spring 2019",
+      "names": "Left to Right: Stephen Brewer, Joshua Dunn",
+      "link": "https://drive.google.com/uc?export=view&id=1QYg37OTb_S-A7FAmUTMSIaph0coaPv1n"
+    },
+    "links": {
+      "title": "Links to Important Documents",
+      "capstoneTempPDF": "https://drive.google.com/uc?export=view&id=1spkbTLr8VNzC7reqUs4EKJwN9u3n1T3V",
+      "capstoneTempPPTX": "https://drive.google.com/uc?export=view&id=149jwfG-JHvBAQO_YO6EhEtGMkoWMxtQx"
     }
-  ],
-  "links": {
-    "title": "Links to Important Documents",
-    "capstoneTempPDF": "https://drive.google.com/uc?export=view&id=1spkbTLr8VNzC7reqUs4EKJwN9u3n1T3V",
-    "capstoneTempPPTX": "https://drive.google.com/uc?export=view&id=149jwfG-JHvBAQO_YO6EhEtGMkoWMxtQx"
   }
 }
