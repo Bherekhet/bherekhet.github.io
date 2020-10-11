@@ -1,63 +1,96 @@
-[
-  {
-    "id": 20201,
-    "firstName": "Bereket1",
-    "lastName": "Degefa",
-    "profilePicture": "https://bereket.netlify.app/static/226d8ed1480c4127836f32ea6a2b663d/32fd5/profile.jpg",
-    "projectTitle": "Home file server",
-    "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
-    "keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
-    "images": [
-      "https://thumbs.dreamstime.com/b/funny-newborn-sleeping-tiny-bed-funny-newborn-sleeping-tiny-bed-pillow-197244011.jpg",
-      "https://thumbs.dreamstime.com/b/playing-vr-headset-african-woman-s-portrait-beautiful-female-model-casual-concept-human-emotions-facial-expression-197041842.jpg",
-      "https://thumbs.dreamstime.com/b/gray-kitten-one-month-old-hands-cat-green-lawn-outside-copy-space-197857199.jpg",
-      "https://thumbs.dreamstime.com/b/almaty-kazakhstan-motorcycle-show-central-square-city-somersaults-air-197686096.jpg"
-    ],
-    "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
-    "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
-    "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
-    "resume": "http://people.eku.edu/chandrav/NET/Capstone_2019/Allen/Allen_resume.pdf"
-  },
-  {
-    "id": 20202,
-    "firstName": "Bereket2",
-    "lastName": "Degefa",
-    "profilePicture": "https://bereket.netlify.app/static/226d8ed1480c4127836f32ea6a2b663d/32fd5/profile.jpg",
-    "projectTitle": "Home file server2",
-    "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
-    "keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
-    "images": [
-      "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
-      "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi",
-      "https://thumbs.dreamstime.com/b/attractive-smiling-brunette-girl-preparing-trout-dish-attractive-smiling-brunette-girl-preparing-trout-dish-healthy-dinner-197647833.jpg",
-      "https://thumbs.dreamstime.com/b/hundar-village-leh-district-jammu-kashmir-india-august-tourists-ride-unique-camels-highest-mountain-desert-very-197592544.jpg",
-      "https://thumbs.dreamstime.com/b/thanksgiving-dinner-chicken-cranberry-sauce-pumpkin-pie-wine-seasonal-vegetables-fruits-traditional-autumn-holiday-food-197372033.jpg"
-    ],
-    "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
-    "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
-    "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
-    "resume": "http://people.eku.edu/chandrav/NET/Capstone_2019/Allen/Allen_resume.pdf"
-  },
-  {
-    "id": 20203,
-    "firstName": "First",
-    "lastName": "Last",
-    "profilePicture": "",
-    "projectTitle": "Project Tester",
-    "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
-    "keywords": "Test1, Test 2, Test 3",
-    "images": [
-      "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuF",
-      "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi",
-      "https://thumbs.dreamstime.com/b/attractive-smiling-brunette-girl-preparing-trout-dish-attractive-smiling-brunette-girl-preparing-trout-dish-healthy-dinner-197647833.jpg",
-      "https://thumbs.dreamstime.com/b/hundar-village-leh-district-jammu-kashmir-india-august-tourists-ride-unique-camels-highest-mountain-desert-very-197592544.jpg",
-      "https://thumbs.dreamstime.com/b/thanksgiving-dinner-chicken-cranberry-sauce-pumpkin-pie-wine-seasonal-vegetables-fruits-traditional-autumn-holiday-food-197372033.jpg"
-    ],
-    "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
-    "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
-    "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
-    "resume": ""
+{
+  "studentData": [
+    {
+      "id": 20201,
+      "firstName": "Bereket1",
+      "lastName": "Degefa",
+      "profilePicture": "https://bereket.netlify.app/static/226d8ed1480c4127836f32ea6a2b663d/32fd5/profile.jpg",
+      "projectTitle": "Home file server",
+      "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
+      "keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
+      "images": [
+        "https://thumbs.dreamstime.com/b/funny-newborn-sleeping-tiny-bed-funny-newborn-sleeping-tiny-bed-pillow-197244011.jpg",
+        "https://thumbs.dreamstime.com/b/playing-vr-headset-african-woman-s-portrait-beautiful-female-model-casual-concept-human-emotions-facial-expression-197041842.jpg",
+        "https://thumbs.dreamstime.com/b/gray-kitten-one-month-old-hands-cat-green-lawn-outside-copy-space-197857199.jpg",
+        "https://thumbs.dreamstime.com/b/almaty-kazakhstan-motorcycle-show-central-square-city-somersaults-air-197686096.jpg"
+      ],
+      "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
+      "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
+      "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
+      "resume": "http://people.eku.edu/chandrav/NET/Capstone_2019/Allen/Allen_resume.pdf"
+    },
+    {
+      "id": 20202,
+      "firstName": "Bereket2",
+      "lastName": "Degefa",
+      "profilePicture": "https://bereket.netlify.app/static/226d8ed1480c4127836f32ea6a2b663d/32fd5/profile.jpg",
+      "projectTitle": "Home file server2",
+      "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
+      "keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuFHm",
+        "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi",
+        "https://thumbs.dreamstime.com/b/attractive-smiling-brunette-girl-preparing-trout-dish-attractive-smiling-brunette-girl-preparing-trout-dish-healthy-dinner-197647833.jpg",
+        "https://thumbs.dreamstime.com/b/hundar-village-leh-district-jammu-kashmir-india-august-tourists-ride-unique-camels-highest-mountain-desert-very-197592544.jpg",
+        "https://thumbs.dreamstime.com/b/thanksgiving-dinner-chicken-cranberry-sauce-pumpkin-pie-wine-seasonal-vegetables-fruits-traditional-autumn-holiday-food-197372033.jpg"
+      ],
+      "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
+      "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
+      "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
+      "resume": "http://people.eku.edu/chandrav/NET/Capstone_2019/Allen/Allen_resume.pdf"
+    },
+    {
+      "id": 20203,
+      "firstName": "First",
+      "lastName": "Last",
+      "profilePicture": "",
+      "projectTitle": "Project Tester",
+      "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
+      "keywords": "Test1, Test 2, Test 3",
+      "images": [
+        "https://drive.google.com/uc?export=view&id=19Mm82Rx0mvjLC26ws_9Z_07FZ9BpuF",
+        "https://drive.google.com/uc?export=view&id=19MMZ3d2WTVit4xNKcSvpuR6M3Ou09Fwi",
+        "https://thumbs.dreamstime.com/b/attractive-smiling-brunette-girl-preparing-trout-dish-attractive-smiling-brunette-girl-preparing-trout-dish-healthy-dinner-197647833.jpg",
+        "https://thumbs.dreamstime.com/b/hundar-village-leh-district-jammu-kashmir-india-august-tourists-ride-unique-camels-highest-mountain-desert-very-197592544.jpg",
+        "https://thumbs.dreamstime.com/b/thanksgiving-dinner-chicken-cranberry-sauce-pumpkin-pie-wine-seasonal-vegetables-fruits-traditional-autumn-holiday-food-197372033.jpg"
+      ],
+      "presentation": "https://drive.google.com/file/d/13WiX9xmnLIX_nk9IzDC8BElq_Jrb22s3/view?usp=sharing",
+      "video": "https://drive.google.com/file/d/1rVL0QSV2j6hFynnzYRzPNK6cZDDmKPVm/view?usp=sharing",
+      "brochure": "https://drive.google.com/file/d/1-EdLKzWtO85NGX4jubrkub9wjuE75pPI/view?usp=sharing",
+      "resume": ""
+    }
+  ],
+  "other": [
+    {
+      "classPhoto": [
+        {
+          "url": "https://drive.google.com/uc?export=view&id=1RWw9iXqnRXDUPuFKGgFqzmmcHNuUR6UE",
+          "leftToRight": "Left to Right: Jeremy, Austin, Daniel, Aaron H., Kyle, Alex, Josh, Martin, Caleb, Scott, Aaron S., Amber, Aaron K, Amadi, JoseSpring/Sum. 2018 grad not in photo: Anthony A., Daniel P., William"
+        },
+        {
+          "url": "https://drive.google.com/uc?export=view&id=1wbDEX9_eODItQcwpq6H3GWfk4wJPLc1Q",
+          "leftToRight": "Left to Right: (Front) Aaron K, Kyle, Amadi, Josh(standing) Austin, Daniel, Alex, Aaron H., Trevor, Manny, Martin, Ricky, Caleb, Aaron S., James, Anthony, Jeremy, Nolan, Scott, Amber, Patrick, Jose"
+        }
+      ],
+      "outstanding": {
+        "title": "Outstanding Network Security & Electronics (NET) Senior 2017-18 ",
+        "name": "Aaron K.",
+        "link": "https://drive.google.com/uc?export=view&id=1GWHVA7HmrkkdTrHskY3PlM87oebPRJWV"
+      },
+      "presenter": {
+        "title": "College of Business & Technology (CBT) Dr. Glen Kleine Capstone Winner, NET Senior 2017-18 ",
+        "name": "Jose",
+        "link": "https://drive.google.com/uc?export=view&id=1iKC4-TnqmjwbR-PHheuEAJt-AyxAU52a"
+      },
+      "ga": {
+        "names": "null",
+        "link": "null"
+      }
+    }
+  ],
+  "links": {
+    "title": "Links to Important Documents",
+    "capstoneTempPDF": "https://drive.google.com/uc?export=view&id=1spkbTLr8VNzC7reqUs4EKJwN9u3n1T3V",
+    "capstoneTempPPTX": "https://drive.google.com/uc?export=view&id=149jwfG-JHvBAQO_YO6EhEtGMkoWMxtQx"
   }
-]
-
-
+}

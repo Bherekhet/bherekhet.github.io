@@ -22,7 +22,6 @@ $(document).ready(function () {
     if (success == 'success') {
       console.log('this is a ' + success);
       for (i in data) {
-        console.log('okay before ' + i)
         stu_id = data[i]["id"];
         f_name = data[i]["firstName"] + ' ';
         l_name = data[i]["lastName"];
@@ -36,7 +35,7 @@ $(document).ready(function () {
 
         /*                         ---------------------- Test below case for images                           */
         
-        images = data[i]["images"][0] == "" || null
+        data[i]["images"][0] == "" || null
           ? images[0] = image_not_found
           : images = data[i]["images"];
 
@@ -133,7 +132,6 @@ $(document).ready(function () {
     stu_project.append(proj_images);
 
 
-    console.log('-----------------')
     //next and prev button for scrolling through project images 
     var btns = 2; // 0 = previous, 1 = next
     var value = '&#8250';
@@ -171,7 +169,6 @@ $(document).ready(function () {
       class: 'keywords'
     })
     for (i in keywords) {
-      console.log('test me ' + keywords[i])
       keys.append(`<span class='chip'>${keywords[i]}</span>`);
     }
 
@@ -248,10 +245,8 @@ function nextORprev(button, id) {
   var new_id = img_id.substring(0, img_id.lastIndexOf('_'));
 
   if (images[current_index] != "") {
-    console.log('this is valid ' + images[current_index])
     $(`#${img_id}`).attr('src', `${images[current_index]}`);
   } else {
-    console.log('image not found ' + images[current_index]);
     $(`#${img_id}`).attr('src', `${image_not_found}`);
   }
   $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
