@@ -3,11 +3,12 @@
 //for image model when clicked => https://www.w3schools.com/css/css3_images.asp
 
 var NOT_EXIST = 'https://bherekhet.github.io/404.html';
+var year = 2019;
 
 var image_not_found = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thestahlman.com%2FCommon%2Fimages%2Fjquery%2Fgalleria%2Fimage-not-found.png&f=1&nofb=1";
 var cap_project;
 $(document).ready(function () {
-  var stu_id, f_name, l_name, avatar, title, desc, keywords, images, video, brochure, presentation, resume, reso;
+  var stu_id, f_name, l_name, avatar, title, desc, keywords, images, video, brochure, presentation, resume, reso, class_photo, outstanding, presenter, ga, links;
   var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources;
 
   const url =
@@ -20,8 +21,10 @@ $(document).ready(function () {
   }).done(function (data, success) {
     cap_project = data;
     console.log('this is a ' + success);
-    console.log(data.other)
+
     if (success == 'success') {
+
+      /*  This section handles Student capstone project    */
       for (i in data.studentData) {
         stu_id = data.studentData[i]["id"];
         f_name = data.studentData[i]["firstName"] + ' ';
@@ -33,8 +36,6 @@ $(document).ready(function () {
         title = data.studentData[i]["projectTitle"];
         desc = data.studentData[i]["projectDesc"];
         keywords = (data.studentData[i]["keywords"]).split(',');
-
-        /*                         ---------------------- Test below case for images                           */
 
         data.studentData[i]["images"][0] == "" || null
           ? images[0] = image_not_found
@@ -56,8 +57,17 @@ $(document).ready(function () {
           ? resume = { 'link': data.studentData[i]['resume'], 'color': '#DDDAF9' }
           : resume = { 'link': NOT_EXIST, 'color': '#faf3dd' }
 
-        createElements();
+        createCapstoneElements();
       }
+      /* This section handles the rest of the page : other data from json  -- student class images, outstanding student ....*/
+      class_photo = data.other.classPhoto;
+      outstanding = data.other.outstanding;
+      presenter = data.other.presenter;
+      ga = data.other.ga;
+      links = data.other.links;
+      // console.log(class_photo, outstanding, presenter, ga, links);
+      createOtherElements(class_photo, outstanding, presenter, ga, links);
+
 
     } else {
       console.log('Something went wrong, data is corrupt');
@@ -65,7 +75,7 @@ $(document).ready(function () {
   });
 
   /*-------------------------------------------------- creates the page -------------------------------------*/
-  function createElements() {
+  function createCapstoneElements() {
 
     /*  bigger screen left and right box*/
     var left = $("<div/>", {
@@ -94,7 +104,6 @@ $(document).ready(function () {
     stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
 
     //div to hold student name
-
     stu_details.append($("<span>", {
       class: "fname"
     }).text(f_name));
@@ -104,7 +113,6 @@ $(document).ready(function () {
 
 
     stu_profile.append(stu_details);
-    // wrapper.append(stu_profile);
 
     //Student project div
     stu_project = $("<div>", {
@@ -114,14 +122,6 @@ $(document).ready(function () {
     left.append(stu_profile);
     left.append(stu_project);
 
-    //a div for project image, title, description and more-buttons
-    // pro_title = $("<div>", {
-    //   class: 'title'
-    // }).append($("<span>", {
-    //   class: "title"
-    // }).text(title));
-    // stu_project.append(pro_title);
-    //project images
     proj_images = $("<div>", {
       class: "images", id: '' + stu_id,
     });
@@ -217,6 +217,84 @@ $(document).ready(function () {
     nextORprev('next', id);
   });
 });
+
+
+function createOtherElements(class_photo, outstanding, presenter, ga, links) {
+  /* -------------------------------- under Other: class photo section ----------------------------------*/
+  var other_class_photo = $("<div>", {
+    id: "other_class_photo"
+  });
+
+  other_class_photo.append(`<p>${year} Capstone Class Photos</p>`)
+  var img_container = $("<div/>", {
+    class: "img_container"
+  })
+
+  class_photo.forEach(element => {
+    img_container.append(`<div class="thumbnail"><img src="${element.url}"/> <p class="left_to_right">${element.leftToRight}</p></div>`)
+  });
+  other_class_photo.append(img_container)
+
+  $(".container").append(other_class_photo);
+
+  /* ---------------------------------- under other: outstanding section ----------------------------------*/
+  var other_outstanding = $("<div/>", {
+    id: "other_outstanding"
+  });
+
+  var img_container = $("<div/>", {
+    class: "img_container"
+  })
+  
+  other_outstanding.append(`<p>${outstanding.title}</p>`)
+  img_container.append(`<div class="thumbnail"><img src="${outstanding.link}"/> <p class="left_to_right">${outstanding.name}</p></div>`) 
+  other_outstanding.append(img_container)
+  $(".container").append(other_outstanding);
+
+  /* ---------------------------------- under other: presenter section ----------------------------------*/
+  var other_presenter = $("<div/>", {
+    id: "other_presenter"
+  });
+
+  var img_container = $("<div/>", {
+    class: "img_container"
+  })
+  
+  other_presenter.append(`<p>${presenter.title}</p>`)
+  img_container.append(`<div class="thumbnail"><img src="${presenter.link}"/> <p class="left_to_right">${presenter.name}</p></div>`) 
+  other_presenter.append(img_container)
+  $(".container").append(other_presenter);
+
+  /* ---------------------------------- under other: ga section ----------------------------------*/
+  var other_ga = $("<div/>", {
+    id: "other_ga"
+  });
+
+  var img_container = $("<div/>", {
+    class: "img_container"
+  })
+  
+  other_ga.append(`<p>${ga.title}</p>`)
+  img_container.append(`<div class="thumbnail"><img src="${ga.link}"/> <p class="left_to_right">${ga.name}</p></div>`) 
+  other_ga.append(img_container)
+  $(".container").append(other_ga);
+
+  /* ---------------------------------- under other: additional links section ----------------------------------*/
+  var other_links = $("<div/>", {
+    id: "other_links"
+  });
+
+  var link_container = $("<div/>", {
+    class: "link_container"
+  })
+  
+  other_links.append(`<p>${links.title}</p>`)
+  link_container.append(`<div><a href="${links.capstoneTempPDF}">Link to capstone project presentation template: PDF Version</a></div>`) 
+  link_container.append(`<div><a href="${links.capstoneTempPPTX}">Link to capstone project presentation template: PowerPoint Version</a></div>`) 
+  other_links.append(link_container)
+  $(".container").append(other_links);
+
+}
 
 //when either next or prev button clicked
 //id = when prev button is clicked, 
