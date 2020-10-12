@@ -247,7 +247,7 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   })
   
   other_outstanding.append(`<p>${outstanding.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${outstanding.link}"/> <p class="left_to_right">${outstanding.name}</p></div>`) 
+  img_container.append(`<div class="thumbnail"><img src="${outstanding.url}"/> <p class="left_to_right">${outstanding.name}</p></div>`) 
   other_outstanding.append(img_container)
   $(".container").append(other_outstanding);
 
@@ -261,7 +261,7 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   })
   
   other_presenter.append(`<p>${presenter.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${presenter.link}"/> <p class="left_to_right">${presenter.name}</p></div>`) 
+  img_container.append(`<div class="thumbnail"><img src="${presenter.url}"/> <p class="left_to_right">${presenter.name}</p></div>`) 
   other_presenter.append(img_container)
   $(".container").append(other_presenter);
 
@@ -275,7 +275,7 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   })
   
   other_ga.append(`<p>${ga.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${ga.link}"/> <p class="left_to_right">${ga.name}</p></div>`) 
+  img_container.append(`<div class="thumbnail"><img src="${ga.url}"/> <p class="left_to_right">${ga.names}</p></div>`) 
   other_ga.append(img_container)
   $(".container").append(other_ga);
 
