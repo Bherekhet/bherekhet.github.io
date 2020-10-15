@@ -26,9 +26,9 @@ $(document).ready(function () {
         stu_id = data[i]["id"];
         f_name = data[i]["firstName"] + ' ';
         l_name = data[i]["lastName"];
-        data[i]['profilePicture'] == ""
-          ? avatar = image_not_found
-          : avatar = data[i]['profilePicture']
+        // data[i]['profilePicture'] == ""
+        //   ? avatar = image_not_found
+        //   : avatar = data[i]['profilePicture']
         // avatar = data[i]["profilePicture"];
         title = data[i]["projectTitle"];
         desc = data[i]["projectDesc"];
@@ -90,8 +90,8 @@ $(document).ready(function () {
       id: "details"
     });
 
-    //hold student profile image
-    stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
+    //hold student profile image - student profile picture not needed
+    // stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
 
     //div to hold student name
     

@@ -9,7 +9,7 @@ var image_not_found = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%
 var cap_project;
 $(document).ready(function () {
   var stu_id, f_name, l_name, avatar, title, desc, keywords, images, video, brochure, presentation, resume, reso, class_photo, outstanding, presenter, ga, links;
-  var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources;
+  var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources, certificate;
 
   const url =
     "https://bherekhet.github.io/data/2019.json";
@@ -27,35 +27,59 @@ $(document).ready(function () {
       /*  This section handles Student capstone project    */
       for (i in data.studentData) {
         stu_id = data.studentData[i]["id"];
-        f_name = data.studentData[i]["firstName"] + ' ';
+        f_name = data.studentData[i]["firstName"];
         l_name = data.studentData[i]["lastName"];
-        data.studentData[i]['profilePicture'] == ""
-          ? avatar = image_not_found
-          : avatar = data.studentData[i]['profilePicture']
+        data.studentData[i]['profilePicture'] == "" ?
+          avatar = image_not_found :
+          avatar = data.studentData[i]['profilePicture']
         // avatar = data[i]["profilePicture"];
         title = data.studentData[i]["projectTitle"];
         desc = data.studentData[i]["projectDesc"];
         keywords = (data.studentData[i]["keywords"]).split(',');
 
-        data.studentData[i]["images"][0] == "" || null
-          ? images[0] = image_not_found
-          : images = data.studentData[i]["images"];
+        data.studentData[i]["images"][0] == "" || null ?
+          images[0] = image_not_found :
+          images = data.studentData[i]["images"];
 
-        data.studentData[i]['presentation'] != ''
-          ? presentation = { 'link': data.studentData[i]['presentation'], 'color': '#DDDAF9' }
-          : presentation = { 'link': NOT_EXIST, 'color': '#faf3dd' }
+        data.studentData[i]['presentation'] != '' ?
+          presentation = {
+            'link': data.studentData[i]['presentation'],
+            'color': '#DDDAF9'
+          } :
+          presentation = {
+            'link': NOT_EXIST,
+            'color': '#faf3dd'
+          }
 
-        data.studentData[i]['video'] != ''
-          ? video = { 'link': data.studentData[i]['video'], 'color': '#DDDAF9' }
-          : video = { 'link': NOT_EXIST, 'color': '#faf3dd' }
+        data.studentData[i]['video'] != '' ?
+          video = {
+            'link': data.studentData[i]['video'],
+            'color': '#DDDAF9'
+          } :
+          video = {
+            'link': NOT_EXIST,
+            'color': '#faf3dd'
+          }
 
-        data.studentData[i]['brochure'] != ''
-          ? brochure = { 'link': data.studentData[i]['brochure'], 'color': '#DDDAF9' }
-          : brochure = { 'link': NOT_EXIST, 'color': '#faf3dd' }
+        data.studentData[i]['brochure'] != '' ?
+          brochure = {
+            'link': data.studentData[i]['brochure'],
+            'color': '#DDDAF9'
+          } :
+          brochure = {
+            'link': NOT_EXIST,
+            'color': '#faf3dd'
+          }
 
-        data.studentData[i]['resume'] != ''
-          ? resume = { 'link': data.studentData[i]['resume'], 'color': '#DDDAF9' }
-          : resume = { 'link': NOT_EXIST, 'color': '#faf3dd' }
+        data.studentData[i]['resume'] != '' ?
+          resume = {
+            'link': data.studentData[i]['resume'],
+            'color': '#DDDAF9'
+          } :
+          resume = {
+            'link': NOT_EXIST,
+            'color': '#faf3dd'
+          }
 
         createCapstoneElements();
       }
@@ -65,7 +89,6 @@ $(document).ready(function () {
       presenter = data.other.presenter;
       ga = data.other.ga;
       links = data.other.links;
-      // console.log(class_photo, outstanding, presenter, ga, links);
       createOtherElements(class_photo, outstanding, presenter, ga, links);
 
 
@@ -93,7 +116,7 @@ $(document).ready(function () {
 
     //student profile 
     stu_profile = $('<div>', {
-      class: 'student_profile'
+      class: 'student_profile', name:f_name+l_name, id:stu_id
     })
 
     stu_details = $("<div>", {
@@ -120,10 +143,10 @@ $(document).ready(function () {
     });
 
     left.append(stu_profile);
-    left.append(stu_project);
 
     proj_images = $("<div>", {
-      class: "images", id: '' + stu_id,
+      class: "images",
+      id: '' + stu_id,
     });
     proj_images.append($("<img>", {
       src: images[0],
@@ -131,7 +154,7 @@ $(document).ready(function () {
       alt: `${title} image`
     }));
     stu_project.append(proj_images);
-    console.log('this is image length'+images.length)
+    console.log('this is image length' + images.length)
 
 
     //next and prev button for scrolling through project images 
@@ -139,7 +162,8 @@ $(document).ready(function () {
     var value = '&#8250';
     var button = 'previous';
     buttons = $("<div>", {
-      class: "buttons", id: '' + stu_id,
+      class: "buttons",
+      id: '' + stu_id,
     });
     for (var i = 0; i < btns; i++) {
       if (i == 1) {
@@ -151,7 +175,30 @@ $(document).ready(function () {
       }
       buttons.append('<input type="button" id="' + button + '_button" value="' + value + '"/>');
     }
-    stu_profile.append(buttons)
+    // stu_profile.append(buttons) -- adding to project visual for testing overlaying on an image
+    stu_project.append(buttons)
+
+
+    /* test data for generating link and certificates */
+    var certificates = ['CompTIA Cloud Essentials', 'CompTIA A+', 'Strata IT Fundamentals'];
+    certificate = $("<div/>", {
+      class: 'certificates'
+    });
+    certificates.forEach(function (cert) {
+      // console.log('item ' + cert)
+      certificate.append(`<a href=''>${cert}</a>`)
+    })
+    stu_project.append(certificate);
+
+    /*  test data for web link to someone's project  */
+    var project_link = $("<div>", {
+      class: 'project_link', id:stu_id
+    });
+    project_link.append(`Web link to ${f_name}'s project`)
+    project_link.append(`<a href='https://bherekhet.github.io/capstoneProjects/2019/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
+    stu_project.append(project_link)
+
+    left.append(stu_project);
 
     //project description
     proj_details = $('<div>', {
@@ -165,7 +212,9 @@ $(document).ready(function () {
       class: "title"
     }).text(title));
 
-    stu_resources = $('<div>', { class: 'keys' });
+    stu_resources = $('<div>', {
+      class: 'keys'
+    });
     //keywords
     keys = $('<div>', {
       class: 'keywords'
@@ -190,9 +239,9 @@ $(document).ready(function () {
     //vide, presentation, brochure, resume  => student resources, all resources combined to => reso
 
     reso = $('<div>', {
-      class: 'resources',
-    }).append(`<span class='res-box' style="background-color:${presentation.color}"><a href=${presentation.link}>Presentation</a></span>`)
-      .append(`<span class='res-box' style="background-color:${brochure.color}"><a href=${brochure.link}>Brochure</a></span>`)
+        class: 'resources',
+      }).append(`<span class='res-box' style="background-color:${brochure.color}"><a href=${brochure.link}>Brochure</a></span>`)
+      .append(`<span class='res-box' style="background-color:${presentation.color}"><a href=${presentation.link}>Presentation</a></span>`)
       .append(`<span class='res-box' style="background-color:${resume.color}"><a href=${resume.link}>Resume</a></span>`)
       .append(`<span class='res-box' style="background-color:${video.color}"><a href=${video.link}>Video</a></span>`);
 
@@ -217,8 +266,14 @@ $(document).ready(function () {
     var id = $(this).parent().attr('id');
     nextORprev('next', id);
   });
-});
 
+  $(document).on('click', '.link_button', function() {
+    var id = $(this).parent().attr('id');
+    generateLink(id);
+  })
+
+
+});
 
 function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   /* -------------------------------- under Other: class photo section ----------------------------------*/
@@ -246,9 +301,9 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   var img_container = $("<div/>", {
     class: "img_container"
   })
-  
+
   other_outstanding.append(`<p>${outstanding.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${outstanding.url}"/> <p class="left_to_right">${outstanding.name}</p></div>`) 
+  img_container.append(`<div class="thumbnail"><img src="${outstanding.url}"/> <p class="left_to_right">${outstanding.name}</p></div>`)
   other_outstanding.append(img_container)
   $(".container").append(other_outstanding);
 
@@ -260,9 +315,9 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   var img_container = $("<div/>", {
     class: "img_container"
   })
-  
+
   other_presenter.append(`<p>${presenter.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${presenter.url}"/> <p class="left_to_right">${presenter.name}</p></div>`) 
+  img_container.append(`<div class="thumbnail"><img src="${presenter.url}"/> <p class="left_to_right">${presenter.name}</p></div>`)
   other_presenter.append(img_container)
   $(".container").append(other_presenter);
 
@@ -274,9 +329,9 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   var img_container = $("<div/>", {
     class: "img_container"
   })
-  
+
   other_ga.append(`<p>${ga.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${ga.url}"/> <p class="left_to_right">${ga.names}</p></div>`) 
+  img_container.append(`<div class="thumbnail"><img src="${ga.url}"/> <p class="left_to_right">${ga.names}</p></div>`)
   other_ga.append(img_container)
   $(".container").append(other_ga);
 
@@ -288,10 +343,10 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
   var link_container = $("<div/>", {
     class: "link_container"
   })
-  
+
   other_links.append(`<p>${links.title}</p>`)
-  link_container.append(`<div><a href="${links.capstoneTempPDF}">Link to capstone project presentation template: PDF Version</a></div>`) 
-  link_container.append(`<div><a href="${links.capstoneTempPPTX}">Link to capstone project presentation template: PowerPoint Version</a></div>`) 
+  link_container.append(`<div><a href="${links.capstoneTempPDF}">Link to capstone project presentation template: PDF Version</a></div>`)
+  link_container.append(`<div><a href="${links.capstoneTempPPTX}">Link to capstone project presentation template: PowerPoint Version</a></div>`)
   other_links.append(link_container)
   $(".container").append(other_links);
 
@@ -303,7 +358,7 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
 //img_id = find current image id so it can be updated when looping to another image
 function nextORprev(button, id) {
   var images = cap_project.studentData.find(stu => stu.id == id)['images'];
-  console.log('images here '+images)
+  console.log('images here ' + images)
   var img_id = $(`#${id}.images`).find('img').attr('id');
   var img_index = img_id.substring(img_id.lastIndexOf('_') + 1);
 
@@ -350,6 +405,16 @@ function nextORprev(button, id) {
   //   $(`#${img_id}`).attr('src', `${images[current_index]}`).fadeIn(1000);
   //   $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
   // });
+}
+
+//Generate link button is clicked
+function generateLink(id) {
+  var link = "https://bherekhet.github.io/capstoneProjects/2019/index.html";
+  var studentName = '';
+  var link_generated = '';
+  // var id = $(this).parent().attr('id');
+  console.log(id)
+  console.log($(`#${id}.project_link`).children().val())
 }
 
 
