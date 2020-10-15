@@ -38,9 +38,7 @@
 }
 
 /* .container> :first-child */
-#details .fname {
-  margin-right: 2px;
-}
+
 
 #previous_button,
 #next_button {

@@ -4,6 +4,7 @@
 
 var NOT_EXIST = 'https://bherekhet.github.io/404.html';
 var year = 2019;
+var link_generator = `https://bherekhet.github.io/capstoneProjects/${year}/index.html#`
 
 var image_not_found = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thestahlman.com%2FCommon%2Fimages%2Fjquery%2Fgalleria%2Fimage-not-found.png&f=1&nofb=1";
 var cap_project;
@@ -127,12 +128,13 @@ $(document).ready(function () {
     stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
 
     //div to hold student name
-    stu_details.append($("<span>", {
-      class: "fname"
-    }).text(f_name));
-    stu_details.append($("<span>", {
-      class: "lname"
-    }).text('' + l_name));
+    stu_details.append($("<a>", {name: f_name+l_name}).text(f_name+' '+l_name))
+    // stu_details.append($("<span>", {
+    //   class: "fname"
+    // }).text(f_name));
+    // stu_details.append($("<span>", {
+    //   class: "lname"
+    // }).text('' + l_name));
 
 
     stu_profile.append(stu_details);
@@ -195,7 +197,7 @@ $(document).ready(function () {
       class: 'project_link', id:stu_id
     });
     project_link.append(`Web link to ${f_name}'s project`)
-    project_link.append(`<a href='https://bherekhet.github.io/capstoneProjects/2019/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
+    project_link.append(`<a href='${link_generator}${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
     stu_project.append(project_link)
 
     left.append(stu_project);
