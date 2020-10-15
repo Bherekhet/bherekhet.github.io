@@ -131,6 +131,7 @@ $(document).ready(function () {
       alt: `${title} image`
     }));
     stu_project.append(proj_images);
+    console.log('this is image length'+images.length)
 
 
     //next and prev button for scrolling through project images 
@@ -301,7 +302,8 @@ function createOtherElements(class_photo, outstanding, presenter, ga, links) {
 //images = find the id which represents which student => get all images using the id from array(contains every student data)
 //img_id = find current image id so it can be updated when looping to another image
 function nextORprev(button, id) {
-  var images = cap_project.find(stu => stu.id == id)['images'];
+  var images = cap_project.studentData.find(stu => stu.id == id)['images'];
+  console.log('images here '+images)
   var img_id = $(`#${id}.images`).find('img').attr('id');
   var img_index = img_id.substring(img_id.lastIndexOf('_') + 1);
 
@@ -322,7 +324,6 @@ function nextORprev(button, id) {
     }
   }
   var new_id = img_id.substring(0, img_id.lastIndexOf('_'));
-
   if (images[current_index] != "") {
     $(`#${img_id}`).attr('src', `${images[current_index]}`);
   } else {
