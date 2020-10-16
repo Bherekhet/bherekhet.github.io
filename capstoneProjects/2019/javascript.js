@@ -117,7 +117,7 @@ $(document).ready(function () {
 
     //student profile 
     stu_profile = $('<div>', {
-      class: 'student_profile', name:f_name+l_name, id:stu_id
+      class: 'student_profile'
     })
 
     stu_details = $("<div>", {
@@ -197,7 +197,7 @@ $(document).ready(function () {
       class: 'project_link', id:stu_id
     });
     project_link.append(`Web link to ${f_name}'s project`)
-    project_link.append(`<a href='${link_generator}${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
+    project_link.append(`<a href='file:///C:/Users/GA/Desktop/Dev/bherekhet.github.io/capstoneProjects/2019/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
     stu_project.append(project_link)
 
     left.append(stu_project);
