@@ -128,7 +128,10 @@
       "projectDesc": "This project’s purpose is to create a solution that resolves the problem of scraping crucial HTML (Hyper Text Markup Language) data and exporting said data into a cloud environment. The goal of my project is to create a Python script that will scrape various HTML (Hyper Text Markup Language) websites and export the data into an AWS (Amazon Web Service) cloud environment. A Python script that calls upon the Beautiful Soup module, runs within an AWS (Amazon Web Service) EC2 (Elastic Compute Cloud) instance. This script then parses the data and exports it into a CSV File for ease of access.",
       "keywords": "AWS, Python, HTML, EC2, Beautiful Soup, Web Scraping",
       "profilePicture": "https://drive.google.com/uc?export=view&id=1zLgWW-gJkZ4WIHl58Xj3KBCKzgIKiG4g",
-      "certificates": "CCNA, AWS CSA",
+      "certificates": {
+        "CCNA": "https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html",
+        "AWS CSA": "https://aws.amazon.com/certification/certified-solutions-architect-associate/"
+      },
       "images": [
         "https://drive.google.com/uc?export=view&id=1zLgWW-gJkZ4WIHl58Xj3KBCKzgIKiG4g",
         "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",

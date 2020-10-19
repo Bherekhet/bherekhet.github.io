@@ -86,13 +86,13 @@
 
 .project_visuals img {
   width: 100%;
-}
-.project_visuals img {
   border-radius: 8px;
-}
+  height: 400px;
+  object-fit: contain;
 
+}
 .certificates {
-  border: 1px solid #d5d5d5;
+  /* border: 1px solid #d5d5d5; */
 }
 
 .certificates,
@@ -271,7 +271,7 @@ iframe {
   .project_visuals {
     width: 100%;
     margin: 0;
-    border: none;
+    /* border: none; */
   }
   /* .project_visuals .buttons {
     position: absolute;
