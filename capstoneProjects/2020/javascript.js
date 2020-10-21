@@ -14,9 +14,9 @@ $(document).ready(function () {
   var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources, certificates;
 
   // const url =
-  //   `https://bherekhet.github.io/data/${year}.json`;
+    `https://bherekhet.github.io/data/${year}.json`;
 
-  const url = "http://localhost/bherekhet.github.io/data/2020.json"
+  // const url = "http://localhost/bherekhet.github.io/data/2020.json"
 
   /*------------------------------------- fetches student data from json file -------------------------------------*/
   // traverse the students object and display corresponding data in a styled format
@@ -200,7 +200,7 @@ $(document).ready(function () {
     });
     project_link.append(`Web link to ${f_name}'s project`)
     // project_link.append(`<a><button class="link_button">Link</button></a>`)
-    project_link.append(`<a href='http://localhost/bherekhet.github.io/capstoneProjects/2020/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
+    // project_link.append(`<a href='http://localhost/bherekhet.github.io/capstoneProjects/2020/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
     // stu_project.append(project_link)
 
     //contact info for students 
