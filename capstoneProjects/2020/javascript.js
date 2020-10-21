@@ -13,8 +13,7 @@ $(document).ready(function () {
     video, brochure, presentation, contact, certificate, reso, class_photo, outstanding, presenter, ga;
   var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources, certificates;
 
-  // const url =
-    `https://bherekhet.github.io/data/${year}.json`;
+  const url = `https://bherekhet.github.io/data/${year}.json`;
 
   // const url = "http://localhost/bherekhet.github.io/data/2020.json"
 
