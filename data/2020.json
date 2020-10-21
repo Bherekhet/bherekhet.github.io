@@ -7,10 +7,10 @@
       "projectTitle": "Cat-Feedertron 3000",
       "projectDesc": "This Project aims to answer the question: “Who will feed my cat when I’m not home?” The goal of the project is to create a pet feeder that is fully automated, so your pet will be fed on time every time. The Raspberry Pi micro computer will control a motor that is connected to a dispensor that will dispense food either on a timer, or by the push of a virtual button.",
       "keywords": "Raspberry Pi, IoT, Pet Feeder, MQTT, SSH, Python",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
@@ -18,11 +18,10 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1Ijq1M4bGFZDA4kqpt1H9603TC2DoId-h",
       "video": [
         "https://drive.google.com/uc?export=view&id=1IrXIxXTenH0-wdNTSDtielTqFxILssyC",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=19-8RK1995sCR50Ewi_Htc0W2PQsB1JBS",
-      "contact": "linkedin.com/in/jeffriesadam"
+      "contact": "https://www.linkedin.com/in/jeffriesadam"
     },
     {
       "id": 202002,
@@ -35,14 +34,13 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1mCMKx76P-sg3zihQ4vWYZ_RnzgWJJPzu",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1nYCR2KnUyL5Jti88w7-whCnX2k8e1y4s",
       "video": [
         "https://www.youtube.com/watch?v=TqAdMgXxKZY&feature=youtu.be",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1YzCdW_XzlCNQwdcToDidb2dQSYwpXRsy",
@@ -58,7 +56,7 @@
       "profilePicture": "https://drive.google.com/uc?export=view&id=1TyFW8BM4ddMI7_4kA8g0lnkLaic98dZs",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         "https://drive.google.com/uc?export=view&id=1TyFW8BM4ddMI7_4kA8g0lnkLaic98dZs",
         null,
         null
@@ -66,11 +64,10 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1dyal4dXTnd9NOocS7I-_-krXJpsi3xQZ",
       "video": [
         "https://youtu.be/YfjYlPxxEEU",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1SakyV1CG8ZCIlKPEL7yY7yv0Tzm0xasW",
-      "contact": "www.linkedin.com/in/bereketdegefa"
+      "contact": "https://www.linkedin.com/in/bereketdegefa"
     },
     {
       "id": 202004,
@@ -79,10 +76,10 @@
       "projectTitle": "Pi Bridge",
       "projectDesc": "I live on a farm with several barns that are within line of sight of my house. My house has internet but none of the barns do. Often times when we are at these barns, we are working on things that require research that we do on our phones. The cellular service isn’t the best, so I proposed setting up a wireless bridge that will allow access to my home network from the barn. This bridge will have two parts; the access point (a device sending a wireless signal) and a bridge (a device that receives a signal, then passes that signal on to another device through an Ethernet interface or another Wi-Fi interface.)",
       "keywords": "Access point, Bridge, Home network, internet",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
@@ -90,11 +87,10 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1BmLwEas1h4SxTW9z_FkExDfUwXe9iEkE",
       "video": [
         "https://drive.google.com/uc?export=view&id=1pI1o2eEjLtphaBHfoY_3EAgyyI7XlMr4",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1KT24dOgib2OND2ygFOhFeo2B_es_uvkj",
-      "contact": "https://www.linkedin.com/in/derek-a-russell/"
+      "contact": "https://www.linkedin.com/in/derek-a-russell"
     },
     {
       "id": 202005,
@@ -107,14 +103,13 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1-8LBGv5KYijO25gJF9f8UTvqOV-yc3Zz",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=18YK4fcAC-abXTEPK47LisPnHWrqk5Fl0",
       "video": [
         "https://youtu.be/NdzI8czitj4",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1KNT0Mf2vd39BBJ-xIos5BWAPquMK20xx",
@@ -134,18 +129,17 @@
       },
       "images": [
         "https://drive.google.com/uc?export=view&id=1zLgWW-gJkZ4WIHl58Xj3KBCKzgIKiG4g",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "1tCsaOBsqy5RlHXxNGSxZ-iVttkNRUHAY",
       "video": [
         "https://www.youtube.com/watch?v=cyjpwHM0qP0",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1h2PIYMRLqBtjTFXzQ0PD0L54XLE5xd5Z",
-      "contact": "https://www.linkedin.com/in/william-h-west/"
+      "contact": "https://www.linkedin.com/in/william-h-west"
     },
     {
       "id": 202007,
@@ -158,14 +152,13 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1KCyYpG23GYUkCyu9d2dgHK7BuEWl0lEW",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1RcqWz43CfkLWlHsJ9O23Enb59yFpEbdD",
       "video": [
         "https://drive.google.com/uc?export=view&id=1VZyaMTkh3T__CLMR6pdlGEURDfDXq_43",
-        null,
         "https://drive.google.com/uc?export=view&id=1Z1v-qACGLGEkhBbXiPZ4XCK7-pp4I5_c"
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1QDCNvIXsYYct2Zo8ZTqxS8TlSo2dC1ki",
@@ -178,10 +171,10 @@
       "projectTitle": "Home file server",
       "projectDesc": "This project is being created to give purpose to some of my old computer hardware in a way that is useful to myself and others around the house. The goal is to create a working system from old, retired computer hardware in order to create a home file server or NAS (Network Attached Storage). The computer will run independently and out of site but will be accessible by any computer on the home network, as long as they have the password. It was also a goal to do this entire project on a budget of $0.",
       "keywords": "FreeNAS, File Server, Repurposed Parts, NAS",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
@@ -189,7 +182,6 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1I7Fi-qHzxO58AK7_ZfTxXLrpVs0ds21a",
       "video": [
         "https://drive.google.com/uc?export=view&id=1jBUrtMnibc_FmhhKYUisbp0V9P36fSra",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1Q8STfmGL58LiMh_6p-pOf_trDTZVtbKm",
@@ -202,18 +194,17 @@
       "projectTitle": "Bluetooth 3 LED Control",
       "projectDesc": "This project is to control 3 LED lights over Bluetooth. This is achieved by using an Arduino and an HC-05 Bluetooth module. One could easily apply this to create a system of lights to signify different meanings, such as a traffic light, without having to have a mess of cables and wires running from computer to light.",
       "keywords": "Arduino, LED, Bluetooth",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=17miVV82yIbUtx5fXSd6iCSpmGJyUTaam",
       "video": [
-        null,
-        null,
+        "https://drive.google.com/uc?export=view&id=14Ihe6_rBJ4X71fxlogueKc9pfRO2na6u",
         null
       ],
       "brochure": null,
@@ -229,8 +220,7 @@
       "profilePicture": "https://drive.google.com/uc?export=view&id=1CKnxfzWmeF-iwMnbWWoNg3CeuFIMgoO1",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
-        null,
+        "https://drive.google.com/uc?export=view&id=1rxhxuA8UYAuSyGhMaQ68vJa13U1wq1m-",
         null,
         null
       ],
@@ -250,10 +240,10 @@
       "projectTitle": "Raspberry Pi WPA2 Password Cracker",
       "projectDesc": "The technical problem I am attempting to tackle with this project is testing strengths of different passwords to see how long it would take to brute force crack your password. My proposed solution is rigging a Raspberry Pi up with the ability to brute force crack a Wi-Fi password. If you have forgotten your password to your Wi-Fi network, you can use this for personal use. For commercial use it can be created and replicated for an IT worker.",
       "keywords": "Wi-Fi, Password, Security, Hacking, Raspberry Pi",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
@@ -261,10 +251,9 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1duoiU7xzAvQvRf6o8bqQDLYcd4eZxaDH",
       "video": [
         "https://drive.google.com/uc?export=view&id=1AdUYRRUmhp98zUWJrHm3ACoDkDMonq4F",
-        null,
         null
       ],
-      "brochure": null,
+      "brochure": "https://drive.google.com/uc?export=view&id=1gzxYsSobOHL9dvSQ1VPBzyZq2x8-ZGin",
       "contact": "jared_hunt60@mymail.eku.edu"
     },
     {
@@ -278,14 +267,13 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1udMvmgOOMYCSgoYxQirUUR7fDn0hScdw",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1bXA4jVizQ3qOtNXzbWoiFomMHJdHtVXg",
       "video": [
         "https://youtu.be/6A8ERU1NSKM",
-        null,
         null
       ],
       "brochure": null,
@@ -298,10 +286,13 @@
       "projectTitle": "Supercapacitor Power Bank",
       "projectDesc": "Most cars on the road today use a lead acid battery to power the starter. Lead acid batteries are affected by the cold and are extremely heavy. My objective with my project is to build a supercapacitor bank that is powerful enough to start a car. Supercapacitors are not affected by the cold like lead acid or even lithium ion batteries, are not affected by charge/discharge cycles, and will be much lighter than a lead acid battery. In an addition to being able to start a vehicle I would like to make the enclosure include 12v outlets for use outside of a vehicle, perhaps while camping.",
       "keywords": "Capacitor, Supercapacitor, Farad, Volt, Amp",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
-      "certificates": "CompTIA ITF+",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
+      "certificates": {
+        "CompTIA": "https://www.comptia.org/home",
+        "ITF+": "https://www.comptia.org/certifications/it-fundamentals"
+      },
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
@@ -309,7 +300,6 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1jDcqVqYbjDU4zydmujMnp8gSKtkNd5e9",
       "video": [
         "https://drive.google.com/uc?export=view&id=1HSAEhmE4WzfnYQTtzJru6Cym06TCvjpY",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1klic8A5PpHh9XpaGgxu8t6OX-LAY8jik",
@@ -326,18 +316,17 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1qAi137kXokIcBjA8KPEJZr709aRoFxX-",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1BFfYCgQ_6SXtTdRjultmq8aZtUdSIwPM",
       "video": [
         "https://youtu.be/w3rW-jeKhVo",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1BHv_xlBXiWFAECerXah1jwReBQ0b4-qc",
-      "contact": "linkedin.com/in/julie-hadley/"
+      "contact": "https://www.linkedin.com/in/julie-hadley"
     },
     {
       "id": 202015,
@@ -350,14 +339,13 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1iDBu9-7LQfbz93duo-7wMAjp_wJQwFSm",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1g6rlzcEGjlPSAoat08urbCKfvnegcIOq",
       "video": [
         "https://drive.google.com/uc?export=view&id=19VBZw6Kck50cTmhjRqWTGOxiP3k0yR0H",
-        null,
         null
       ],
       "brochure": null,
@@ -370,10 +358,10 @@
       "projectTitle": "Mind Control Headset: Using Brainwaves to Control Devices",
       "projectDesc": "The goal of this project is to show how many of our everyday toys and tech we have laying around can be used in different and creative ways rather than collecting dust and being wasted. In this project I modify an old Mindflex toy headset that has an EEG chip to measure my brainwaves through an Arduino to turn an LED and a small DC motor powered fan on as my focus increases and off when my focus decreases. The goals of the project have been successfully met and I can use the headset to turn an LED and a small fan on or off using only",
       "keywords": "Arduino, Mindflex, Brainwaves, EEG, Repurposing, Electronics",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
@@ -381,7 +369,6 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1e1bOAqHfDGXl3lD47Jom_f2GQOs_BPnb",
       "video": [
         "https://drive.google.com/uc?export=view&id=1TFCGQ1jn-bdvcCT1dxu1ffS80fKvMhkR",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1248AzSf-seehs2ORhA7_MlEN8kUx3EYF",
@@ -392,24 +379,23 @@
       "firstName": "Makaylee",
       "lastName": "Adams",
       "projectTitle": "RetroPie Video Game Emulator Using Raspberry Pi",
-      "projectDesc": "my brainwaves.",
+      "projectDesc": "There are many games that I used to play as a child that I cannot anymore due to how old the consoles are. There are also games that I never got to play because we did not have access to certain gaming consoles. I found a solution for this: game emulators. A game emulator is a type of emulator that allows a computing device to act as a gaming console’s hardware and play its games. You can do this for many different consoles: SNES, Genesis, Game Boy, Atari, PlayStation 1 and 2, and many others. So, I decided that using a Raspberry Pi to emulate these consoles was the best and cheapest option for me.",
       "keywords": "RetroPie, emulator, Raspberry PI",
       "profilePicture": "https://drive.google.com/uc?export=view&id=1sml_tT3UymfL2b46jzS4KpYqymj4fVjL",
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1sml_tT3UymfL2b46jzS4KpYqymj4fVjL",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
-      "presentation": null,
+      "presentation": "https://drive.google.com/uc?export=view&id=1mz2lAUwIrhK6ZzzMBRuDXH4L-rRqQqjR",
       "video": [
-        null,
-        null,
+        "https://drive.google.com/uc?export=view&id=1aNoBK9nRa2Z4jHvIiX7v1es2VVfRVDg2",
         null
       ],
-      "brochure": null,
-      "contact": null
+      "brochure": "https://drive.google.com/uc?export=view&id=1PWJ1SkdDb4FmurOBEg3THRVBmkmHNFck",
+      "contact": "https://www.linkedin.com/in/makaylee-adams"
     },
     {
       "id": 202018,
@@ -419,25 +405,26 @@
       "projectDesc": "The purpose of my project was to modify the manufacturer’s design of a gate opener by: making improvements to the linear actuator, converting it to be self-contained, and adding an automatic function for the user. The automatic function utilizes an Arduino and a 433MHz transmitter to reproduce the signal required to open and close the gate. The Arduino and transmitter were placed into a small case designed to be used in any vehicle and powered by a USB port or by the included 9 volt battery inside the case. This device is able to provide secure automatic functionality for homeowners who have a gated driveway entrance.",
       "keywords": "Gate Opener, Automatic, Arduino, Self-contained, SDR",
       "profilePicture": "https://drive.google.com/uc?export=view&id=1nuGoXMFznp9kqDv6dO5cFP71_D0N-uJC",
-      "certificates": "CSWA",
+      "certificates": {
+        "CSWA": "https://www.solidworks.com/certifications/mechanical-design-cswa-mechanical-design"
+      },
       "images": [
         "https://drive.google.com/uc?export=view&id=1nuGoXMFznp9kqDv6dO5cFP71_D0N-uJC",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1A9n7SsN1DD_Ic3B04lFSwfn6gpOp_2jc",
       "video": [
         "https://www.youtube.com/watch?v=tfeujdHb8nc",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1Gd1iHRN5svy3En7_Wc5BX9zhT3J0UhvZ",
-      "contact": "https://www.linkedin.com/in/mark-barsalona/"
+      "contact": "https://www.linkedin.com/in/mark-barsalona"
     },
     {
       "id": 202019,
-      "firstName": "Matt",
+      "firstName": "Matthew",
       "lastName": "Biggs",
       "projectTitle": "Arduino Uno RFID Lockbox",
       "projectDesc": "The technical problem at hand is security and wanting to store items and belongings in a more secure place rather than leaving them just sitting around your room or house. I have decided to build a lock box to store your items in that requires an RFID badge to swiped across the reader in order to unlock the lockbox. This lockbox will have enough room to store keys and a wallet or other small items that you want to keep secured and safer than just sitting them out in the open. This is going to be a fully customized and built wooden box with a 12v solenoid door lock on it that will unlock when the badge is swiped. This project has given me a better understanding of radio frequency badges as well as some key concepts of my electronics courses.",
@@ -446,17 +433,16 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1dn6GWHShoQKY8eOGeCBA9pdZ5Ea9VwT_",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=16QD95LSbbKrYQ99wFi1UdOoOvRo9y2Ny",
       "video": [
         "https://drive.google.com/uc?export=view&id=1yqVAwrNoOagpK5XI5YUQ2MdoJujmYmGN",
-        null,
         null
       ],
-      "brochure": null,
+      "brochure": "https://drive.google.com/uc?export=view&id=1rDjt0Pakc7QPUWoYjvBPqRRd9mtD9QIW",
       "contact": "matthew_biggs2@yahoo.com"
     },
     {
@@ -466,17 +452,16 @@
       "projectTitle": "Network Monitoring Server",
       "projectDesc": "The purpose of this project was to upgrade the current network monitoring server for the Madison County Public Schools system. The current system was not consistently providing real-time data indicating if the system was functioning properly or not. Additionally, the network administrators were not able to properly monitor the network at work or from home. I will be using Nagios.core on a virtual machine running Ubuntu Server. This was provided by the Technology Department of the Madison County Public Schools system.",
       "keywords": "Nagios.Core, Ubuntu Server, Network Monitoring",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1wJpYDTFadG2lE2Z5619YFq2-YP4OigQh",
       "video": [
-        null,
         null,
         null
       ],
@@ -490,10 +475,10 @@
       "projectTitle": "Raspberry Pi Based Networker Adblocker Progress Report",
       "projectDesc": "The practice of adblocking has become more and more commonplace in internet usage. Generally, the usage of browser-based extensions can effectively handle this task, however, some browsers and/or devices are incapable of running these extensions. However, there are hardware solutions capable of covering both devices and browsers unable to handle adblocking on their own. This project aims to setup and provide an example of network-based adblocking via the usage of hardware devices running a DNS sinkhole. Currently, my project has been successful in both Core 1 and Core 2 objectives. Core 1 (with adjustments) provided proof-of-concept while Core 2 proved the concept successful with usage of a Raspberry Pi device. The extension phase implementation remains dependent on time constraints.",
       "keywords": "Browser extensions, DNS sinkhole, Raspberry Pi",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=11NUCGxnxV_tGzYQCrA3FNYZwfJv_HI8h",
         null,
         null,
         null
@@ -501,11 +486,10 @@
       "presentation": "https://drive.google.com/uc?export=view&id=1VZpFARXSBqqie3mMeDsqOLFvxV-fk1RY",
       "video": [
         "https://drive.google.com/uc?export=view&id=1QFh9Rlzy2oj0kGjn2w15T-I5DTsCy6M_",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1VyYSayP49n9dldKUkTRwy8ft-HroZypJ",
-      "contact": null
+      "contact": "https://www.linkedin.com/in/matthew-d-robbins"
     },
     {
       "id": 202022,
@@ -514,18 +498,17 @@
       "projectTitle": "Raspberry Pi as a Security Camera",
       "projectDesc": "My project was started to help my sister who was wanting some form of security cameras set up outside of her house. I decided I could do my project and help her out at the same time. I wanted to be able to remotely be able to view camera footage that was monitoring the outside of my sister’s house. I will be using a Raspberry Pi Zero W board as the cameras. This will increase the amount of security at her house while keeping it low cost.",
       "keywords": "IP Camera, Raspberry Pi, Security",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1tUGqAwVOAHGHhaL239WOKWdR6hX7IMyy",
       "video": [
-        null,
-        null,
+        "https://drive.google.com/uc?export=view&id=1JhtwajTJzSxkpKVbt3C-9n9PBqS0kzcn",
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1jIEiwHN3ym2oi-0eoeF9_T1jQha1j-9Z",
@@ -542,14 +525,13 @@
       "certificates": null,
       "images": [
         "https://drive.google.com/uc?export=view&id=1pAA-wC8XN-fX4D0tU76M_iNZ-zuErYqh",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1JtGt8tVOU0k337ecWNDETVwc4_8TcrfX",
       "video": [
         "https://youtu.be/X_f4iqOvbXU",
-        null,
         null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1uMwYJ7WeXNctPv-wvc0rlzo1nPmAPHmG",
@@ -562,18 +544,17 @@
       "projectTitle": "Made Easy as Pi: Home Automaton with Raspberry P",
       "projectDesc": "With the creation of the Raspberry Pi 4, it has developed a way for people to do feasible DIY projects with the Internet of Things (IoT).  The IoT is growing at an exponential rate, the IoT market is on pace to grow to over $3 trillion annually by 2026, and home automation is leading that charge. Wouldn’t it be great if we made people’s lives easier with home automation? Face recognition and motion detection can be for use in the home, it can be used as a single functional unit or as an element of a much bigger system, connected to the IoT. To create a complex system, the Raspberry Pi 4 and OpenCV was used together to \nrecognize faces and detect motion on a Pi camera. The outputs are saved into cloud storage, for further training and recognition. To make our home system even larger, we will connect speakers to the Raspberry Pi via Bluetooth. ",
       "keywords": "Home Automation, Face Detection, Raspberry Pi, OpenCV, Bluetooth",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1sCoy4jKPKZ4wSv-bRdAnBzlH5PrzwQ-A/",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1sCoy4jKPKZ4wSv-bRdAnBzlH5PrzwQ-A",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1sCoy4jKPKZ4wSv-bRdAnBzlH5PrzwQ-A/",
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1sCoy4jKPKZ4wSv-bRdAnBzlH5PrzwQ-A",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1pSVZa2V4D1qiR6morHdKJVd7Lue7zyz0",
       "video": [
         "https://drive.google.com/uc?export=view&id=1cRwxmLoJ6atZ9c1Wb1hYNm5E9CVR_EV1",
-        null,
         "https://drive.google.com/uc?export=view&id=112bKHRIbsYO3ch15Ail7E2uZWzn_JjlL"
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1OGNkM3erhuXNyeha7ORMmCqm3IfSypiE",
@@ -584,21 +565,20 @@
       "firstName": "Tyler",
       "lastName": "Branham",
       "projectTitle": "Integrating Citrix Casting into NComputing with Raspberry Pi 3",
-      "projectDesc": "",
+      "projectDesc": "This project is based on Citrix Casting done through the NComputing Raspberry Pi 3. Citrix Casting is when you are able to login to the Citrix Workspace app on a phone or tablet, launch a virtual desktop, and then scan a QR code to get the session transferred onto Raspberry Pi.  You can then use your device as the mouse to navigate to anything you need to on the monitor you are casting to. Companies are starting to use this technology in meetings where they can just have PowerPoint loaded up on their virtual desktop session and throw it onto the monitor that is connected to the Raspberry Pi, give the presentation, and throw the session back onto their phone when they are done.  This is a fairly new technology that is starting to see more and more use the more Citrix updates it and promotes it",
       "keywords": "Citrix, Pi, Workspace",
-      "profilePicture": "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+      "profilePicture": "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
       "certificates": null,
       "images": [
-        "https://drive.google.com/uc?export=view&id=1IG44BBhMTt2cd3-bDm8dRMSrkbplNQ-t",
+        "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq",
         null,
         null,
         null
       ],
       "presentation": "https://drive.google.com/uc?export=view&id=1ij5vFm4xLQF9UxiWQ3cf8BaBWO3aWWw4",
       "video": [
-        null,
-        null,
-        "https://drive.google.com/uc?export=view&id=1Z1v-qACGLGEkhBbXiPZ4XCK7-pp4I5_c"
+        "https://drive.google.com/uc?export=view&id=1Z1v-qACGLGEkhBbXiPZ4XCK7-pp4I5_c",
+        null
       ],
       "brochure": "https://drive.google.com/uc?export=view&id=1UZTC6jO4strT4cTPRDhymOhN5KMJOZy1",
       "contact": "tyler_branham@mymail.eku.edu"
@@ -617,8 +597,8 @@
     ],
     "outstanding": {
       "title": "Outstanding Network Security & Electronics (NET) Senior 2019-20",
-      "name": "",
-      "url": ""
+      "name": "Mark Barsalona",
+      "url": "https://drive.google.com/uc?export=view&id=15Eldg6906ATGrJTES23FaxdpTNZIeWEW"
     },
     "presenter": {
       "title": "College of Business & Technology Glen Kleine Capstone Presenter NET Senior 2019-20",

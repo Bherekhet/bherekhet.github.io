@@ -37,19 +37,23 @@
   align-items: center;
 }
 
-/* .container> :first-child */
-
-
 #previous_button,
 #next_button {
-  /* border-radius: 50%; */
+  position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #dddaf9;
+  background-color: #4c65f3;
   border: none;
   border-radius: 50%;
   font-weight: bold;
   font-size: 20px;
+}
+#previous_button {
+  left: 10px;
+}
+
+#next_button {
+  right: 20px;
 }
 
 #next_button:hover,
@@ -74,32 +78,37 @@
   width: 100%;
 }
 
-#previous_button {
-  position: absolute;
-  left: 10px;
-}
-
-#next_button {
-  position: absolute;
-  right: 20px;
-}
-
 .project_visuals img {
   width: 100%;
   border-radius: 8px;
-  height: 400px;
+  height: 50vw;
   object-fit: contain;
-
-}
-.certificates {
-  /* border: 1px solid #d5d5d5; */
 }
 
 .certificates,
-.project_link {
-  margin-top: 10px;
-  font-size: 1vw;
+.project_link,
+.contact_me {
+  font-size: 0.6rem;
   padding: 5px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contact_me span:hover {
+  box-shadow: 0px 15px 20px #eeeeee;
+}
+
+.contact_me span {
+  background-color: #dddaf9;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.contact_me a,
+.contact_me a:visited {
+  text-decoration: none;
+  color: #0000ff;
 }
 
 .project_link button {
@@ -138,6 +147,7 @@
   border-radius: 200px;
   background-color: #dddaf9;
   font-size: 2vw;
+  padding: 4px 10px;
 }
 
 .project_details .desc {
@@ -159,7 +169,7 @@
   display: inline-block;
   margin: 5px;
   padding: 4px 2px;
-  font-size: 2vw;
+  font-size: 3vw;
   width: 20%;
   text-align: center;
   align-self: center;
@@ -168,15 +178,16 @@
   background-color: #fff !important;
 }
 
-.res-box a {
+.res-box a,
+a:visited {
   text-decoration: none;
+  /* color: #0000ff; */
 }
 
 .res-box a:hover,
 .res-box:hover {
-  background-color: #000 !important;
-  box-shadow: 0px 15px 20px #dddaf9;
-  color: #fff !important;
+  background-color: #eeeeee !important;
+  box-shadow: 0px 15px 20px #eeeeee;
 }
 
 #other_class_photo,
@@ -186,11 +197,11 @@
 #other_links {
   width: 90%;
   max-width: 100%;
-  border: 1px solid#D5D5D5;
+  /* border: 1px solid#D5D5D5; */
   padding: 15px;
   text-align: center;
   margin: 0 auto;
-  font-size: medium;
+  font-size: 0.6rem;
 }
 
 .img_container {
@@ -215,15 +226,42 @@
   margin: 0;
 }
 
-.ads {
-  /* margin: 0 auto; */
+.container:last-child #wrapper:last-child {
+  background-color: red;
 }
 
-iframe {
+.ads {
+  width: 70%;
+  height: 300px;
   margin: 0 auto;
-  display: block;
-  width: 80%;
-  height: 500px;
+}
+
+.ads iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.additionals {
+  display: grid;
+  padding-top: 20px;
+
+  /* width: 100%; */
+}
+
+.additionals a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #000;
+  text-align: center;
+  background-color: #dddaf9;
+  margin: 4px;
+  border-radius: 200px;
+  padding: 10px;
+}
+
+.additionals a:hover {
+  box-shadow: 0px 15px 20px #eeeeee;
+  color: #4c65f3;
 }
 
 @media only screen and (min-width: 768px) {
@@ -270,27 +308,20 @@ iframe {
 
   .project_visuals {
     width: 100%;
-    margin: 0;
-    /* border: none; */
-  }
-  /* .project_visuals .buttons {
-    position: absolute;
-    top: 40%;
-  }
-  .buttons {
-    width: 100%;
+    /* margin: 0; */
+    border: none;
   }
 
-  #previous_button {
-      position: absolute;
-      left: 10px;
+  .project_visuals .images {
+    margin: 0 auto;
   }
 
-  #next_button {
-    position: absolute;
-    right: 20px;
-  } */
-
+  .project_visuals img {
+    max-width: 100%;
+    max-height: 30vw;
+    object-fit: unset;
+    vertical-align: middle;
+  }
   .project_details {
     border: none;
     width: 100%;
@@ -332,7 +363,7 @@ iframe {
   #other_presenter,
   #other_ga,
   #other_links {
-    font-size: medium;
+    font-size: 1.5rem;
   }
 
   .thumbnail p {
@@ -341,5 +372,44 @@ iframe {
 
   .img_container {
     width: 60%;
+  }
+
+  .ads {
+    width: 60%;
+    /* margin: 40px; */
+    /* padding-bottom: 50xp; */
+    height: 300px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+
+  .ads iframe {
+    width: 60%;
+    float: left;
+    height: 100%;
+  }
+
+  .additionals {
+    display: grid;
+    padding-top: 80px;
+    padding-left: 20px;
+
+    /* width: 100%; */
+  }
+
+  .additionals a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #000;
+    text-align: center;
+    background-color: #dddaf9;
+    margin: 4px;
+    border-radius: 200px;
+    padding: 10px;
+  }
+
+  .additionals a:hover {
+    box-shadow: 0px 15px 20px #eeeeee;
+    color: #4c65f3;
   }
 }
