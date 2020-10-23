@@ -4,7 +4,7 @@
 
 var NOT_EXIST = 'https://bherekhet.github.io/404.html';
 var year = 2020;
-var link_generator = `https://bherekhet.github.io/capstoneProjects/${year}/index.html#`
+// var link_generator = `https://bherekhet.github.io/capstoneProjects/${year}/index.html#`
 
 var image_not_found = "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq";
 var cap_project;
@@ -54,19 +54,17 @@ $(document).ready(function () {
         data.studentData[i]['presentation'] != null ?
           presentation = {
             'link': data.studentData[i]['presentation'],
-            'color': '#0000ff'
+            'color': '#394867'
           } :
           presentation = {
             'link': NOT_EXIST,
             'color': '#D3D3D3'
           }
 
-        data.studentData[i]['video'].filter(x => {
-            return x
-          }).length > 0 ?
+        data.studentData[i]['video'].filter(x => {return x}).length > 0 ?
           video = {
             'link': data.studentData[i]['video'],
-            'color': '#0000ff'
+            'color': '#394867'
           } :
           video = null
         // console.log(data.studentData[i]['video'].filter(x => {return x}).length)
@@ -74,7 +72,7 @@ $(document).ready(function () {
         data.studentData[i]['brochure'] != null ?
           brochure = {
             'link': data.studentData[i]['brochure'],
-            'color': '#0000ff'
+            'color': '#394867'
           } :
           brochure = {
             'link': NOT_EXIST,
@@ -138,12 +136,25 @@ $(document).ready(function () {
 
     stu_profile.append(stu_details);
 
+    //contact info for students 
+    var contact_info = $("<div>", {
+      class: 'contact_me',
+    });
+
+    var address = contact
+    if (contact.includes('@')) {
+      address = 'mailto:' + contact;
+    }
+
+    contact_info.append(`<a href=${address}><i class='fa fa-envelope' aria-hidden='true'></i></a>`)
+    stu_profile.append(contact_info);
+
+    left.append(stu_profile);
+
     //Student project div
     stu_project = $("<div>", {
       class: "project_visuals"
     });
-
-    left.append(stu_profile);
 
     proj_images = $("<div>", {
       class: "images",
@@ -155,7 +166,6 @@ $(document).ready(function () {
       alt: `${title} image`
     }));
     stu_project.append(proj_images);
-    // console.log('this is image length' + images.length)
 
 
     //next and prev button for scrolling through project images 
@@ -202,17 +212,7 @@ $(document).ready(function () {
     // project_link.append(`<a href='http://localhost/bherekhet.github.io/capstoneProjects/2020/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
     // stu_project.append(project_link)
 
-    //contact info for students 
-    var contact_info = $("<div>", {
-      class: 'contact_me',
-    });
-
-    var address = contact
-    if (contact.includes('@')) {
-      address = 'mailto:' + contact;
-    }
-    contact_info.append(`<span><a href=${address}>Contact Me</a></span>`)
-    stu_project.append(contact_info)
+    // stu_project.append(contact_info)
 
 
     left.append(stu_project);
@@ -254,11 +254,11 @@ $(document).ready(function () {
     right.append(proj_details);
 
     //vide, presentation, brochure, resume  => student resources, all resources combined to => reso
-
+// aria-label="Link to Alex Trent Presentation - ppt file" 
     reso = $('<div>', {
         class: 'resources',
-      }).append(`<span class='res-box'"><a style="color: ${brochure.color}" href=${brochure.link}>Brochure</a></span>`)
-      .append(`<span class='res-box'"><a style="color: ${presentation.color}" href=${presentation.link}>Presentation</a></span>`)
+      }).append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} brochure" style="color: ${brochure.color}" href=${brochure.link}>Brochure</a></span>`)
+      .append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} presentation"style="color: ${presentation.color}" href=${presentation.link}>Presentation</a></span>`)
 
     //show only 1 video button is there is less than 2 video link available
     // console.log(video.link)
@@ -267,10 +267,10 @@ $(document).ready(function () {
     } else if (video.link.filter(x => {
         return x
       }).length > 1) {
-      reso.append(`<span class='res-box'"><a style="color: ${video.color}" href=${video.link[0]}>Video 1</a></span>`);
-      reso.append(`<span class='res-box'"><a style="color: ${video.color}" href=${video.link[1]}>Video 2</a></span>`);
+      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video 1" style="color: ${video.color}" href=${video.link[0]}>Video 1</a></span>`);
+      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video 2" style="color: ${video.color}" href=${video.link[1]}>Video 2</a></span>`);
     } else {
-      reso.append(`<span class='res-box'"><a style="color: ${video.color}" href=${video.link[0]}>Video</a></span>`);
+      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video" style="color: ${video.color}" href=${video.link[0]}>Video</a></span>`);
     }
 
     right.append(reso);
@@ -306,67 +306,35 @@ $(document).ready(function () {
 });
 
 function createOtherElements(class_photo, outstanding, presenter, ga) {
-  /* -------------------------------- under Other: class photo section ----------------------------------*/
-  var other_class_photo = $("<div>", {
-    id: "other_class_photo"
+  var student_recog = $("<div>", {
+    class: "student-recognition"
   });
-
-  other_class_photo.append(`<p>${year} Capstone Class Photos</p>`)
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  class_photo.forEach(element => {
-    img_container.append(`<div class="thumbnail"><img src="${element.url}"/> <p class="left_to_right">${element.leftToRight}</p></div>`)
+  student_recog.append('<p>Student Recognition</p>')
+  
+  var other_photo = $("<div>", {
+    id: "other-photos"
   });
-  other_class_photo.append(img_container)
-
-  // $(".container").append(other_class_photo);
-
-  /* ---------------------------------- under other: outstanding section ----------------------------------*/
-  var other_outstanding = $("<div/>", {
-    id: "other_outstanding"
-  });
-
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  other_outstanding.append(`<p>${outstanding.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${outstanding.url}"/> <p class="left_to_right">${outstanding.name}</p></div>`)
-  other_outstanding.append(img_container)
-  $(".container").append(other_outstanding);
-
-  /* ---------------------------------- under other: presenter section ----------------------------------*/
-  var other_presenter = $("<div/>", {
-    id: "other_presenter"
-  });
-
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  other_presenter.append(`<p>${presenter.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${presenter.url}"/> <p class="left_to_right">${presenter.name}</p></div>`)
-  other_presenter.append(img_container)
-  // $(".container").append(other_presenter);
-
-  /* ---------------------------------- under other: ga section ----------------------------------*/
-  var other_ga = $("<div/>", {
-    id: "other_ga"
-  });
-
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  other_ga.append(`<p>${ga.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${ga.url}"/> <p class="left_to_right">${ga.names}</p></div>`)
-  other_ga.append(img_container)
-  // $(".container").append(other_ga);
+  
+  otherElements(class_photo, other_photo)
+  otherElements(outstanding, other_photo)
+  otherElements(presenter, other_photo)
+  otherElements(ga, other_photo)
+  
+  student_recog.append(other_photo)
+  $(".container").append(student_recog);
 
 }
 
+function otherElements(data, contain) {
+  for (i in data) {
+    var img_container = $("<div/>", {
+      class: "img-container"
+    })
+    img_container.append(`<img src="${data[i].url}" alt="A class picture containing ${data[i].name}"/> <p>${data[i].title}</p><p class="left-to-right">${data[i].name}</p>`)
+    contain.append(img_container)
+  }
+
+}
 //when either next or prev button clicked
 //id = when prev button is clicked, 
 //images = find the id which represents which student => get all images using the id from array(contains every student data)
@@ -396,7 +364,7 @@ function nextORprev(button, id) {
   }
   var new_id = img_id.substring(0, img_id.lastIndexOf('_'));
   if (images[current_index] != "") {
-    $(`#${img_id}`).attr('src', `${images[current_index]}`);
+    $(`#${img_id}`).attr('src', `${images[current_index]}`, 'alt', 'Student\'s project image');
   } else {
     $(`#${img_id}`).attr('src', `${image_not_found}`);
   }
@@ -414,6 +382,33 @@ function generateLink(id) {
   console.log($(`#${id}.project_link`).children().val())
 }
 
+
+function makeNavResponsive() {
+  console.log('checking ');
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function toggleYearMenu() {
+  // console.log($(".dropdown-content").classList)
+  // $(".dropdown-content").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
+  // console.log('check mark 1')
+  // console.log('check mark 2')
+  // var dropdowns = $(".dropdown-content");
+  // console.log(dropdowns);
+  // var i;
+  // for (i = 0; i < dropdowns.length; i++) {
+  //   var openDropdown = dropdowns[i];
+  //   if (openDropdown.classList.contains('show')) {
+  //     openDropdown.classList.remove('show');
+  //   }
+  // }
+}
 
 
 

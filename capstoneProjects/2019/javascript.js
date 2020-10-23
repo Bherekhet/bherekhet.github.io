@@ -4,16 +4,18 @@
 
 var NOT_EXIST = 'https://bherekhet.github.io/404.html';
 var year = 2019;
-var link_generator = `https://bherekhet.github.io/capstoneProjects/${year}/index.html#`
+// var link_generator = `https://bherekhet.github.io/capstoneProjects/${year}/index.html#`
 
-var image_not_found = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thestahlman.com%2FCommon%2Fimages%2Fjquery%2Fgalleria%2Fimage-not-found.png&f=1&nofb=1";
+var image_not_found = "https://drive.google.com/uc?export=view&id=1dhIHvR-6e-6unG23D7tiW4dwcoWkUaIq";
 var cap_project;
 $(document).ready(function () {
-  var stu_id, f_name, l_name, avatar, title, desc, keywords, images, video, brochure, presentation, resume, reso, class_photo, outstanding, presenter, ga, links;
-  var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources, certificate;
+  var stu_id, f_name, l_name, avatar, title, desc, keywords, images = [],
+    video, brochure, presentation, contact, certificate, reso, class_photo, outstanding, presenter, ga;
+  var wrapper, stu_details, stu_profile, pro_title, stu_project, proj_details, proj_images, keys, stu_resources, certificates;
 
-  const url =
-    "https://bherekhet.github.io/data/2019.json";
+  const url = `https://bherekhet.github.io/data/${year}.json`;
+
+  // const url = "http://localhost/bherekhet.github.io/data/2020.json"
 
   /*------------------------------------- fetches student data from json file -------------------------------------*/
   // traverse the students object and display corresponding data in a styled format
@@ -37,50 +39,51 @@ $(document).ready(function () {
         title = data.studentData[i]["projectTitle"];
         desc = data.studentData[i]["projectDesc"];
         keywords = (data.studentData[i]["keywords"]).split(',');
+        // certificate = (data.studentData[i]["certificates"]).split(',')
+        (data.studentData[i]["certificates"]) != null ?
+          certificate = (data.studentData[i]["certificates"]) :
+          certificate = null
 
-        data.studentData[i]["images"][0] == "" || null ?
-          images[0] = image_not_found :
-          images = data.studentData[i]["images"];
+        //checking for null valued images
+        for (j in data.studentData[i]["images"]) {
+          if (data.studentData[i]["images"][j] != null) {
+            images.push(data.studentData[i]["images"][j])
+          }
+        }
 
-        data.studentData[i]['presentation'] != '' ?
+        data.studentData[i]['presentation'] != null ?
           presentation = {
             'link': data.studentData[i]['presentation'],
-            'color': '#DDDAF9'
+            'color': '#394867'
           } :
           presentation = {
             'link': NOT_EXIST,
-            'color': '#faf3dd'
+            'color': '#D3D3D3'
           }
-
-        data.studentData[i]['video'] != '' ?
+          console.log(data.studentData[i]['video'].length)
+        data.studentData[i]['video'].filter(x => {
+            return x
+          }).length > 0 ?
           video = {
             'link': data.studentData[i]['video'],
-            'color': '#DDDAF9'
+            'color': '#394867'
           } :
-          video = {
-            'link': NOT_EXIST,
-            'color': '#faf3dd'
-          }
+          video = null
+        // console.log(data.studentData[i]['video'].filter(x => {return x}).length)
 
-        data.studentData[i]['brochure'] != '' ?
+        data.studentData[i]['brochure'] != null ?
           brochure = {
             'link': data.studentData[i]['brochure'],
-            'color': '#DDDAF9'
+            'color': '#394867'
           } :
           brochure = {
             'link': NOT_EXIST,
-            'color': '#faf3dd'
+            'color': '#D3D3D3'
           }
 
-        data.studentData[i]['resume'] != '' ?
-          resume = {
-            'link': data.studentData[i]['resume'],
-            'color': '#DDDAF9'
-          } :
-          resume = {
-            'link': NOT_EXIST,
-            'color': '#faf3dd'
-          }
+        data.studentData[i]['contact'] != null ?
+          contact = data.studentData[i]['contact'] :
+          contact = NOT_EXIST
 
         createCapstoneElements();
       }
@@ -89,8 +92,7 @@ $(document).ready(function () {
       outstanding = data.other.outstanding;
       presenter = data.other.presenter;
       ga = data.other.ga;
-      links = data.other.links;
-      createOtherElements(class_photo, outstanding, presenter, ga, links);
+      createOtherElements(class_photo, outstanding, presenter, ga);
 
 
     } else {
@@ -117,7 +119,8 @@ $(document).ready(function () {
 
     //student profile 
     stu_profile = $('<div>', {
-      class: 'student_profile'
+      class: 'student_profile',
+      id: `${f_name}${l_name}`
     })
 
     stu_details = $("<div>", {
@@ -127,24 +130,33 @@ $(document).ready(function () {
     //hold student profile image
     stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
 
-    //div to hold student name
-    stu_details.append($("<a>", {name: f_name+l_name}).text(f_name+' '+l_name))
-    // stu_details.append($("<span>", {
-    //   class: "fname"
-    // }).text(f_name));
-    // stu_details.append($("<span>", {
-    //   class: "lname"
-    // }).text('' + l_name));
-
+    // div to hold student name
+    stu_details.append($("<a>", {
+      // href: `#${f_name + l_name}`
+    }).text(f_name + ' ' + l_name))
+    // stu_details.append($("<a>").text(f_name + ' ' + l_name))
 
     stu_profile.append(stu_details);
+
+    //contact info for students 
+    var contact_info = $("<div>", {
+      class: 'contact_me',
+    });
+
+    var address = contact
+    if (contact.includes('@')) {
+      address = 'mailto:' + contact;
+    }
+
+    contact_info.append(`<a href=${address}><i class='fa fa-envelope' aria-hidden='true'></i></a>`)
+    stu_profile.append(contact_info);
+
+    left.append(stu_profile);
 
     //Student project div
     stu_project = $("<div>", {
       class: "project_visuals"
     });
-
-    left.append(stu_profile);
 
     proj_images = $("<div>", {
       class: "images",
@@ -156,7 +168,6 @@ $(document).ready(function () {
       alt: `${title} image`
     }));
     stu_project.append(proj_images);
-    console.log('this is image length' + images.length)
 
 
     //next and prev button for scrolling through project images 
@@ -175,30 +186,36 @@ $(document).ready(function () {
         value = "&#8249";
         button = "previous"
       }
-      buttons.append('<input type="button" id="' + button + '_button" value="' + value + '"/>');
+      if (images.length > 1)
+        buttons.append('<input type="button" id="' + button + '_button" value="' + value + '"/>');
+
     }
     // stu_profile.append(buttons) -- adding to project visual for testing overlaying on an image
-    stu_project.append(buttons)
-
+    if (images.length > 1) stu_project.append(buttons)
 
     /* test data for generating link and certificates */
-    var certificates = ['CompTIA Cloud Essentials', 'CompTIA A+', 'Strata IT Fundamentals'];
-    certificate = $("<div/>", {
+    certificates = $("<div/>", {
       class: 'certificates'
     });
-    certificates.forEach(function (cert) {
-      // console.log('item ' + cert)
-      certificate.append(`<a href=''>${cert}</a>`)
-    })
-    stu_project.append(certificate);
+    if (certificate != null) {
+      for (var key in certificate) {
+        certificates.append(`<a href='${certificate[key]}'>${key}</a>`)
+      }
+      stu_project.append(certificates);
+    }
 
-    /*  test data for web link to someone's project  */
+    //------------- currently not implemented----------- for generating student link that is sharable
     var project_link = $("<div>", {
-      class: 'project_link', id:stu_id
+      class: 'project_link',
+      id: stu_id
     });
     project_link.append(`Web link to ${f_name}'s project`)
-    project_link.append(`<a href='file:///C:/Users/GA/Desktop/Dev/bherekhet.github.io/capstoneProjects/2019/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
-    stu_project.append(project_link)
+    // project_link.append(`<a><button class="link_button">Link</button></a>`)
+    // project_link.append(`<a href='http://localhost/bherekhet.github.io/capstoneProjects/2020/index.html#${f_name}${l_name}'><button value=${f_name}${l_name} class="link_button">Link</button></a>`)
+    // stu_project.append(project_link)
+
+    // stu_project.append(contact_info)
+
 
     left.append(stu_project);
 
@@ -239,27 +256,40 @@ $(document).ready(function () {
     right.append(proj_details);
 
     //vide, presentation, brochure, resume  => student resources, all resources combined to => reso
-
+    // aria-label="Link to Alex Trent Presentation - ppt file" 
     reso = $('<div>', {
         class: 'resources',
-      }).append(`<span class='res-box' style="background-color:${brochure.color}"><a href=${brochure.link}>Brochure</a></span>`)
-      .append(`<span class='res-box' style="background-color:${presentation.color}"><a href=${presentation.link}>Presentation</a></span>`)
-      .append(`<span class='res-box' style="background-color:${resume.color}"><a href=${resume.link}>Resume</a></span>`)
-      .append(`<span class='res-box' style="background-color:${video.color}"><a href=${video.link}>Video</a></span>`);
+      }).append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} brochure" style="color: ${brochure.color}" href=${brochure.link}>Brochure</a></span>`)
+      .append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} presentation"style="color: ${presentation.color}" href=${presentation.link}>Presentation</a></span>`)
+
+    //show only 1 video button is there is less than 2 video link available
+    // console.log(video.link)
+    if (video == null) {
+      reso.append(`<span class='res-box'"><a style="color: #d3d3d3" href=${NOT_EXIST}>Video</a></span>`);
+    } else if (video.link.filter(x => {
+        return x
+      }).length > 1) {
+      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video 1" style="color: ${video.color}" href=${video.link[0]}>Video 1</a></span>`);
+      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video 2" style="color: ${video.color}" href=${video.link[1]}>Video 2</a></span>`);
+    } else {
+      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video" style="color: ${video.color}" href=${video.link[0]}>Video</a></span>`);
+    }
 
     right.append(reso);
-    // wrapper.append(reso);
     wrapper.append(left);
     wrapper.append(right);
 
 
     $(".container").append(wrapper);
+
+    images = [] //reset image list after it is not needed for that student
   }
 
   /*  --------------------------------------- next and previous button function --------------------------------*/
   //when previous button is clicked 
   $(document).on("click", "#previous_button", function () {
     var id = $(this).parent().attr('id');
+    console.log('old id ' + id)
     nextORprev('prev', id);
   });
 
@@ -269,7 +299,7 @@ $(document).ready(function () {
     nextORprev('next', id);
   });
 
-  $(document).on('click', '.link_button', function() {
+  $(document).on('click', '.link_button', function () {
     var id = $(this).parent().attr('id');
     generateLink(id);
   })
@@ -277,94 +307,48 @@ $(document).ready(function () {
 
 });
 
-function createOtherElements(class_photo, outstanding, presenter, ga, links) {
-  /* -------------------------------- under Other: class photo section ----------------------------------*/
-  var other_class_photo = $("<div>", {
-    id: "other_class_photo"
+function createOtherElements(class_photo, outstanding, presenter, ga) {
+  var student_recog = $("<div>", {
+    class: "student-recognition"
+  });
+  student_recog.append('<p>Student Recognition</p>')
+
+  var other_photo = $("<div>", {
+    id: "other-photos"
   });
 
-  other_class_photo.append(`<p>${year} Capstone Class Photos</p>`)
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
+  otherElements(class_photo, other_photo)
+  otherElements(outstanding, other_photo)
+  otherElements(presenter, other_photo)
+  otherElements(ga, other_photo)
 
-  class_photo.forEach(element => {
-    img_container.append(`<div class="thumbnail"><img src="${element.url}"/> <p class="left_to_right">${element.leftToRight}</p></div>`)
-  });
-  other_class_photo.append(img_container)
-
-  $(".container").append(other_class_photo);
-
-  /* ---------------------------------- under other: outstanding section ----------------------------------*/
-  var other_outstanding = $("<div/>", {
-    id: "other_outstanding"
-  });
-
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  other_outstanding.append(`<p>${outstanding.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${outstanding.url}"/> <p class="left_to_right">${outstanding.name}</p></div>`)
-  other_outstanding.append(img_container)
-  $(".container").append(other_outstanding);
-
-  /* ---------------------------------- under other: presenter section ----------------------------------*/
-  var other_presenter = $("<div/>", {
-    id: "other_presenter"
-  });
-
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  other_presenter.append(`<p>${presenter.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${presenter.url}"/> <p class="left_to_right">${presenter.name}</p></div>`)
-  other_presenter.append(img_container)
-  $(".container").append(other_presenter);
-
-  /* ---------------------------------- under other: ga section ----------------------------------*/
-  var other_ga = $("<div/>", {
-    id: "other_ga"
-  });
-
-  var img_container = $("<div/>", {
-    class: "img_container"
-  })
-
-  other_ga.append(`<p>${ga.title}</p>`)
-  img_container.append(`<div class="thumbnail"><img src="${ga.url}"/> <p class="left_to_right">${ga.names}</p></div>`)
-  other_ga.append(img_container)
-  $(".container").append(other_ga);
-
-  /* ---------------------------------- under other: additional links section ----------------------------------*/
-  var other_links = $("<div/>", {
-    id: "other_links"
-  });
-
-  var link_container = $("<div/>", {
-    class: "link_container"
-  })
-
-  other_links.append(`<p>${links.title}</p>`)
-  link_container.append(`<div><a href="${links.capstoneTempPDF}">Link to capstone project presentation template: PDF Version</a></div>`)
-  link_container.append(`<div><a href="${links.capstoneTempPPTX}">Link to capstone project presentation template: PowerPoint Version</a></div>`)
-  other_links.append(link_container)
-  $(".container").append(other_links);
+  student_recog.append(other_photo)
+  $(".container").append(student_recog);
 
 }
 
+function otherElements(data, contain) {
+  for (i in data) {
+    var img_container = $("<div/>", {
+      class: "img-container"
+    })
+    img_container.append(`<img src="${data[i].url}" alt="A class picture containing ${data[i].name}"/> <p>${data[i].title}</p><p class="left-to-right">${data[i].name}</p>`)
+    contain.append(img_container)
+  }
+
+}
 //when either next or prev button clicked
 //id = when prev button is clicked, 
 //images = find the id which represents which student => get all images using the id from array(contains every student data)
 //img_id = find current image id so it can be updated when looping to another image
 function nextORprev(button, id) {
   var images = cap_project.studentData.find(stu => stu.id == id)['images'];
-  console.log('images here ' + images)
   var img_id = $(`#${id}.images`).find('img').attr('id');
   var img_index = img_id.substring(img_id.lastIndexOf('_') + 1);
 
-  var img_len = images.length
+  //find valid images from the length, most were just placeholders with 'null'
+  var img_len = images.filter(Boolean).length;
+
   var current_index = parseInt(img_index);
 
   if (button == ('prev')) {
@@ -382,42 +366,52 @@ function nextORprev(button, id) {
   }
   var new_id = img_id.substring(0, img_id.lastIndexOf('_'));
   if (images[current_index] != "") {
-    $(`#${img_id}`).attr('src', `${images[current_index]}`);
+    $(`#${img_id}`).attr('src', `${images[current_index]}`, 'alt', 'Student\'s project image');
   } else {
     $(`#${img_id}`).attr('src', `${image_not_found}`);
   }
   $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
-
-
-  // imageExists(images[parseInt(current_index)], function (exists) {
-  //   if (exists == true) {
-  //     console.log('checked true');
-  //     $(`#${img_id}`).attr('src', `${images[current_index]}`);
-  //   } else {
-  //     console.log('checked false');
-  //     $(`#${img_id}`).attr('src', `${image_not_found}`);
-  //   }
-
-  //   $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
-
-  // });
-  // $(`#${img_id}`).fadeOut(1000, function () {
-  //   console.log('gets here')
-  //   $(`#${img_id}`).attr('src', '');
-  //   $(`#${img_id}`).attr('src', `${images[current_index]}`).fadeIn(1000);
-  //   $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
-  // });
 }
+
 
 //Generate link button is clicked
 function generateLink(id) {
-  var link = "https://bherekhet.github.io/capstoneProjects/2019/index.html";
+  var link = `https://bherekhet.github.io/capstoneProjects/${year}/index.html`;
   var studentName = '';
   var link_generated = '';
   // var id = $(this).parent().attr('id');
   console.log(id)
   console.log($(`#${id}.project_link`).children().val())
 }
+
+
+function makeNavResponsive() {
+  console.log('checking ');
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function toggleYearMenu() {
+  // console.log($(".dropdown-content").classList)
+  // $(".dropdown-content").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
+  // console.log('check mark 1')
+  // console.log('check mark 2')
+  // var dropdowns = $(".dropdown-content");
+  // console.log(dropdowns);
+  // var i;
+  // for (i = 0; i < dropdowns.length; i++) {
+  //   var openDropdown = dropdowns[i];
+  //   if (openDropdown.classList.contains('show')) {
+  //     openDropdown.classList.remove('show');
+  //   }
+  // }
+}
+
 
 
 /*---------------------------------------Checking if image url is valid and exists -------------------------------------*/
