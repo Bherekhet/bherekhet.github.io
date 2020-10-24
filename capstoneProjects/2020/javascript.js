@@ -141,12 +141,14 @@ $(document).ready(function () {
       class: 'contact_me',
     });
 
+    var contact_icon = "fa fa-linkedin";
     var address = contact
     if (contact.includes('@')) {
       address = 'mailto:' + contact;
+      contact_icon = "fa fa-envelope";
     }
 
-    contact_info.append(`<a href=${address}><i class='fa fa-envelope' aria-hidden='true'></i></a>`)
+    contact_info.append(`<a href=${address}><i class='${contact_icon}' aria-hidden='true'></i></a>`)
     stu_profile.append(contact_info);
 
     left.append(stu_profile);

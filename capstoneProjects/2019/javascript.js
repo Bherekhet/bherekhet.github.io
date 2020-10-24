@@ -15,7 +15,8 @@ $(document).ready(function () {
 
   const url = `https://bherekhet.github.io/data/${year}.json`;
 
-  // const url = "http://localhost/bherekhet.github.io/data/2020.json"
+  // const url = "http://localhost/bherekhet.github.io/data/2019.json"
+
 
   /*------------------------------------- fetches student data from json file -------------------------------------*/
   // traverse the students object and display corresponding data in a styled format
