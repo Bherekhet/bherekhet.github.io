@@ -155,17 +155,6 @@ nav li:first-child a,
   justify-content: space-between;
   font-size: 18px;
   color: #800;
-
-  /* height: 30px; */
-  /* padding: 5px; */
-  /* display: flex;
-  max-width: 100%;
-  border: 1px solid #d5d5d5;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 16px; */
 }
 
 .student_profile i {
@@ -241,18 +230,26 @@ nav li:first-child a,
 
 .project_visuals img {
   width: 100%;
-  border-radius: 8px;
-  /* height: 50vw; */
+  height: 50vw;
   object-fit: contain;
 }
 
-.certificates,
-.project_link {
-  font-size: 0.6rem;
+.certificates {
+  font-size: 14px;
   padding: 5px;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+}
+
+/* .certificates i a {
+  display: inline-block;
+  padding: 10px;
+} */
+.certificates i {
+  color: #0000ff;
+  font-size: 16px;
+  padding-right: 4px;
 }
 
 .contact_me span:hover {
@@ -271,9 +268,9 @@ nav li:first-child a,
   color: #000;
 }
 
-.project_link button {
+/* .project_link button {
   margin-left: 10px;
-}
+} */
 
 .certificates a {
   padding-right: 10px;
@@ -290,8 +287,8 @@ nav li:first-child a,
   font-size: 14px;
 }
 
-.keys .title {
-  padding: 6px;
+.keys {
+  padding-left: 6px;
 }
 
 .keys .title .title {
@@ -334,11 +331,6 @@ nav li:first-child a,
   flex-wrap: wrap;
 }
 
-.resources a {
-  text-decoration: none;
-
-}
-
 .res-box {
   border: 1px solid #394867;
   padding: 5px 8px;
@@ -347,26 +339,25 @@ nav li:first-child a,
   margin-top: 2px;
 }
 
-.res-box a,
+/* .res-box a,
 a:visited {
   text-decoration: none;
-}
+} */
 
-.res-box:hover,
-.res-box a:hover {
+.res-box:hover {
   cursor: pointer;
 }
 
 .res-box:hover,
 .res-box a:hover {
-  background-color: #000 !important;
-  color: #fff !important;
+  background-color: #000;
+  color: #fff;
 }
 
 /* ***************************student recognition css*************/
 
 .student-recognition {
-  background-color: #eeeeee;
+  background-color: #f4f3f3;;
   width: 100%;
 }
 
@@ -402,7 +393,7 @@ a:visited {
 
 /* ***************************cyber systems ad css*************/
 .ads {
-  background-color: #f4f3f3;
+  background-color: #eeeeee;
   text-align: center;
   padding-top: 20px;
 }
@@ -432,6 +423,11 @@ a:visited {
 
 /* footer css */
 
+.social-media {
+  text-align: center;
+  font-size: 30px;
+}
+
 footer {
   background-color: #394867;
   width: 100%;
@@ -451,8 +447,6 @@ footer .helpful-links {
 }
 
 footer .docs:first-child p {
-  /* font-size: 0.7rem; */
-  /* border-bottom: 1px solid #fff; */
   margin-bottom: 5px;
 }
 
@@ -464,12 +458,17 @@ footer .docs a {
 
 .bottom a {
   background-color: #c4c4c4;
-  padding: 5px;
+  /* padding: 5px; */
   color: #000;
+  padding: 2px;
 }
 
 .bottom .fa {
-  border-radius: 50%;
+  border-radius: 200px;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+
 }
 
 footer .middle {
@@ -491,7 +490,7 @@ footer .bottom {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   color: #fff;
 }
 
@@ -559,13 +558,6 @@ footer .bottom {
     width: 100%;
     margin-bottom: 10px;
     border: none;
-
-    /* border: none; */
-    /* margin: 0;
-    margin-bottom: 10px;
-    font-weight: normal;
-    font-size: 1.6vw;
-    color: #880000; */
   }
 
   .student_profile img {
@@ -587,8 +579,7 @@ footer .bottom {
   .project_visuals img {
     max-width: 100%;
     max-height: 30vw;
-    /* object-fit: unset; */
-    vertical-align: middle;
+    height: unset;
   }
 
   .project_details {
@@ -622,7 +613,6 @@ footer .bottom {
   .res-box {
     margin-right: 5px;
     padding: 10px 12px;
-
   }
 
   .keywords .chip {

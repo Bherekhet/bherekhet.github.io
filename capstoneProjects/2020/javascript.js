@@ -198,6 +198,7 @@ $(document).ready(function () {
       class: 'certificates'
     });
     if (certificate != null) {
+      certificates.append("<i class='fa fa-certificate' aria-hidden='true'></i>")
       for (var key in certificate) {
         certificates.append(`<a href='${certificate[key]}'>${key}</a>`)
       }
@@ -259,8 +260,8 @@ $(document).ready(function () {
 // aria-label="Link to Alex Trent Presentation - ppt file" 
     reso = $('<div>', {
         class: 'resources',
-      }).append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} brochure" style="color: ${brochure.color}" href=${brochure.link}>Brochure</a></span>`)
-      .append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} presentation"style="color: ${presentation.color}" href=${presentation.link}>Presentation</a></span>`)
+      }).append(`<button class='res-box' onclick="location.href='${brochure.link}'">Brochure</button>`)
+      .append(`<button class='res-box' onclick="location.href='${presentation.link}'">Presentation</button>`)
 
     //show only 1 video button is there is less than 2 video link available
     // console.log(video.link)
@@ -269,10 +270,10 @@ $(document).ready(function () {
     } else if (video.link.filter(x => {
         return x
       }).length > 1) {
-      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video 1" style="color: ${video.color}" href=${video.link[0]}>Video 1</a></span>`);
-      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video 2" style="color: ${video.color}" href=${video.link[1]}>Video 2</a></span>`);
+      reso.append(`<button class='res-box' onclick="location.href='${video.link[0]}'">Video 1</button>`);
+      reso.append(`<button class='res-box' onclick="location.href='${video.link[1]}'">Video 2</button>`);
     } else {
-      reso.append(`<span class='res-box'"><a aria-label="Link to ${f_name+' '+l_name} video" style="color: ${video.color}" href=${video.link[0]}>Video</a></span>`);
+      reso.append(`<button class='res-box' onclick="location.href='${video.link[0]}'">Video</button>`);
     }
 
     right.append(reso);
@@ -373,18 +374,6 @@ function nextORprev(button, id) {
   $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
 }
 
-
-//Generate link button is clicked
-function generateLink(id) {
-  var link = `https://bherekhet.github.io/capstoneProjects/${year}/index.html`;
-  var studentName = '';
-  var link_generated = '';
-  // var id = $(this).parent().attr('id');
-  console.log(id)
-  console.log($(`#${id}.project_link`).children().val())
-}
-
-
 function makeNavResponsive() {
   console.log('checking ');
   var x = document.getElementById("myTopnav");
@@ -396,91 +385,5 @@ function makeNavResponsive() {
 }
 
 function toggleYearMenu() {
-  // console.log($(".dropdown-content").classList)
-  // $(".dropdown-content").classList.toggle("show");
   document.getElementById("myDropdown").classList.toggle("show");
-  // console.log('check mark 1')
-  // console.log('check mark 2')
-  // var dropdowns = $(".dropdown-content");
-  // console.log(dropdowns);
-  // var i;
-  // for (i = 0; i < dropdowns.length; i++) {
-  //   var openDropdown = dropdowns[i];
-  //   if (openDropdown.classList.contains('show')) {
-  //     openDropdown.classList.remove('show');
-  //   }
-  // }
 }
-
-
-
-/*---------------------------------------Checking if image url is valid and exists -------------------------------------*/
-/*
-                                                NOTE TO SELF
-
-Image checking doesn't work yet. The problem seems to be with the 'foreach' loop. foreach loop and async function
-don't work well together. I need the images links validated before the rest of the respective part of page loads and
-*the problem I am having is that the loops would complete first before all links are validated.
-I am adding minor checks for images, I will come back to this later.
-
-*/
-/*
-
-
-function imageExists(url, callback) {
-  console.log('this is the url it is getting = ' + url);
-  var img = new Image();
-  img.onload = function () { callback(true); };
-  img.onerror = function () { callback(false); };
-  img.src = url;
-}
-
-async function imageExist(url, callback) {
-  return new Promise(resolve => {
-    var img = new Image();
-    img.onload = function () { callback(true); };
-    img.onerror = function () { callback(false); };
-    img.src = url;
-  })
-}
-
-function checkImage(url) {
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.onload = () => resolve(true);
-    img.onerror = () => resolve(false);
-    img.src = url;
-  });
-};
-
-
-function asyncTest() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve('I am tired');
-    }, 5000);
-  });
-}
-
-
-$(`#${img_id}`).fadeOut(1000, function () {
-    // console.log('CHECKING FOR OLD ')
-    //checking if image exists
-    imageExists(images[parseInt(current_index)], function (exists) {
-      console.log('studet id ' + new_id + 'current index' + current_index)
-      console.log('RESULT: url=' + images[current_index] + ', exists=' + exists);
-      $(`#${img_id}`).attr('src', '');
-
-      if (exists == true) {
-        console.log('checked true');
-        $(`#${img_id}`).attr('src', `${images[current_index]}`).show();
-      } else {
-        console.log('checked false');
-        $(`#${img_id}`).attr('src', `${image_not_found}`).show();
-      }
-    })
-
-    $(`#${img_id}`).attr('id', `${new_id}_${current_index}`);
-  });
-
-*/
