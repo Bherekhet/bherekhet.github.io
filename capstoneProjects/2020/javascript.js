@@ -126,7 +126,7 @@ $(document).ready(function () {
     });
 
     //hold student profile image
-    stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image">`)
+    stu_details.append(`<img src=${avatar} alt="${f_name} ${l_name}'s image" loading="lazy">`)
 
     // div to hold student name
     stu_details.append($("<a>", {
@@ -165,7 +165,8 @@ $(document).ready(function () {
     proj_images.append($("<img>", {
       src: images[0],
       id: `proj_img_${stu_id}_0`,
-      alt: `${title} image`
+      alt: `${title} image`,
+      loading: 'lazy'
     }));
     stu_project.append(proj_images);
 
@@ -333,7 +334,7 @@ function otherElements(data, contain) {
     var img_container = $("<div/>", {
       class: "img-container"
     })
-    img_container.append(`<img src="${data[i].url}" alt="A class picture containing ${data[i].name}"/> <p>${data[i].title}</p><p class="left-to-right">${data[i].name}</p>`)
+    img_container.append(`<img src="${data[i].url}" alt="A class picture containing ${data[i].name}" loading="lazy"/> <p>${data[i].title}</p><p class="left-to-right">${data[i].name}</p>`)
     contain.append(img_container)
   }
 
@@ -367,7 +368,7 @@ function nextORprev(button, id) {
   }
   var new_id = img_id.substring(0, img_id.lastIndexOf('_'));
   if (images[current_index] != "") {
-    $(`#${img_id}`).attr('src', `${images[current_index]}`, 'alt', 'Student\'s project image');
+    $(`#${img_id}`).attr('src', `${images[current_index]}`, 'alt', 'Student\'s project image', 'loading', 'lazy');
   } else {
     $(`#${img_id}`).attr('src', `${image_not_found}`);
   }
